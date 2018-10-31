@@ -1,0 +1,11 @@
+.order {
+	text-decoration: none;
+	background-color: #e45028;
+	border-radius: 5px;
+	padding: 12px 18px;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: Ubuntu;
+	font-weight: medium;
+	font-size: 13px;
+}

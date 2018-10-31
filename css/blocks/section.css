@@ -1,0 +1,24 @@
+.section {
+	display: flex;
+}
+
+.section__left {
+	margin-top: 5px;
+	margin-left: 50px;
+}
+
+.section__right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 10px;
+	margin-top: 60px;
+}
+
+.section__natural {
+	font-family: Lifehack;
+	font-weight: regular;
+	font-size: 54px;
+	color: #fff;
+	margin: 0;
+}

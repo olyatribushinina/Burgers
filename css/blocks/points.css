@@ -1,0 +1,32 @@
+.scroll {
+	width: 60px;
+	margin-left: auto;
+}
+
+.points {
+	list-style: none;
+}
+
+.points__item--active:after {
+	display: block;
+	content: "";
+	width: 16px;
+	height: 16px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: -6px;
+	left: -6px;
+	transform: translate(6px; 6px);
+	bottom: ;
+}
+
+.points__item {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #fff;
+	position: relative;
+	margin-bottom: 15px;
+	
+} 

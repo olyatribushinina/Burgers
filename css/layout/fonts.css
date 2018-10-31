@@ -1,0 +1,20 @@
+@font-face {
+	font-family: Gagalin-Regular;
+	src: url(../../fonts/9903.otf);
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Lifehack Medium;
+	src: url(../../fonts/DearType - Lifehack Medium.otf);
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Lifehack;
+	src: url(../../fonts/DearType - Lifehack.otf);
+	font-style: normal;
+	font-weight: normal;
+}
