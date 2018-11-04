@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700');
-@import url(layout/fonts.css);
 @import url(layout/normalize.css);
+@import url(layout/fonts.css);
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700");
 @import url(layout/base.css);
-
-@import url(blocks/navigation.css);
-@import url(blocks/btn.css);
-@import url(blocks/points.css);
-@import url(blocks/section.css);
 @import url(blocks/arrow.css);
+@import url(blocks/btns.css);
+@import url(blocks/navigation.css);
+@import url(blocks/fixed-menu.css);
+@import url(blocks/sections.css);
+@import url(blocks/titles.css);

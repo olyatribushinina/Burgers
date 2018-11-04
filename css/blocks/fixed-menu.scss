@@ -1,0 +1,41 @@
+.points {
+	position: fixed;
+	top: 80px;
+	right: 23.4%;
+	list-style: none;
+}
+
+.points__item {
+	margin-bottom: 10px;
+}
+
+.points__item--active .points__link {
+	border-color: #fff;
+}
+
+.points__link {
+	display: block;
+	width: 16px;
+	height: 16px;
+	border: 1px solid transparent;
+	border-radius: 50%;
+	position: relative;
+
+	&:hover {
+	border-color: #fff;
+	}
+
+
+	&:before {
+	display: block;
+	content: "";
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ 	}
+}

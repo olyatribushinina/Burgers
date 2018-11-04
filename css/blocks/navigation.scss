@@ -7,12 +7,14 @@
   display: flex;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
-  justify-content: flex-end; }
+  justify-content: flex-end; 
+}
 
 .navigation__item {
   margin-left: 35px;
-  position: relative; }
-  .navigation__item:before {
+  position: relative;
+
+  &:before {
     display: block;
     content: "";
     width: 5px;
@@ -21,12 +23,17 @@
     background-color: #fff;
     position: absolute;
     top: 7px;
-    left: -19px; }
+    left: -19px;
+  }
+}
 
 .navigation__item_none {
-  margin-left: 15px; }
-  .navigation__item_none:before {
-    display: none; }
+  margin-left: 15px;
+
+   &:before {
+    display: none;
+   }
+}
 
 .navigation__link {
   text-decoration: none;
@@ -34,4 +41,5 @@
   font-family: Ubuntu;
   font-weight: Medium;
   font-size: 13px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}

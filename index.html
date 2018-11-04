@@ -2,61 +2,193 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Mr Burger</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Burger</title>
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	<div class="wrapper">
+		<!-- header верстаем абсолютом -->
 		<header class="header">
 			<div class="container">
 				<div class="header__left">
-					<div class="logo">
-						<img src="img/logo.png" alt="Mr Burger" class="logo__pic">
-					</div>               
+					<img src="img/logo.png" alt="логотип - Mr Burger" class="logo__pic">               
 				</div>
-				<div class="header__middle">
-					<nav class="nav">
-						<ul class="navigation">
-							<li class="navigation__item navigation__item--start">о нас</li>
-							<li class="navigation__item">бургеры</li>
-							<li class="navigation__item">команда</li>
-							<li class="navigation__item">меню</li>
-							<li class="navigation__item">отзывы</li>
-							<li class="navigation__item">как мы работаем</li>
-							<li class="navigation__item">контакты</li>
-						</ul>
-					</nav>
-				</div>	
 				<div class="header__right">
-					<a href="#" class="order">заказать</a>
+					<ul class="navigation">
+						<li class="navigation__item navigation__item_none">
+							<a href="#" class="navigation__link">о нас</a> 
+						</li>
+						<li class="navigation__item">
+							<a href="#" class="navigation__link">бургеры</a> 
+						</li>
+						<li class="navigation__item">
+							<a href="#" class="navigation__link">команда</a> 
+						</li>
+						<li class="navigation__item">
+							<a href="#" class="navigation__link">меню</a> 
+						</li>
+						<li class="navigation__item">
+							<a href="#" class="navigation__link">отзывы</a> 
+						</li>
+						<li class="navigation__item">
+							<a href="#" class="navigation__link">как мы работаем</a> 
+						</li>
+						<li class="navigation__item">
+							<a href="#" class="navigation__link">контакты</a> 
+						</li>
+						<li class="navigation__item navigation__item_none"> 
+							<a href="#" class="order">заказать</a> 
+						</li>
+					</ul>
+				</div>
+			</div>	
+		</header>
+
+		<section class="section section_welcome">
+			<div class="container">
+				<div class="welcome__content">
+					<div class="welcome__left">
+						<img src="img/drops.png" alt="Гамбургер" class="welcome__image">
+					</div>
+					<div class="welcome__right">
+						<h1 class="double-title">
+						<span class="title">мы делаем</span>
+						<span class="welcome__title">натуральные бургеры</span>
+						</h1>
+					</div>
 				</div>
 			</div>
-		</header>
-		<div class="container">
-			<section class="section">
-				<div class="section__left">
-					<img src="img/drops.png" alt="burger" class="section__image">
+		</section>
+		
+		<section class="section section_about" id="go">
+			<div class="container">
+				<div class="about__content">
+					<h2 class="title title__about">мы лучшие</h2>	
+					<ul class="we">
+						<li class="we__item we__item_meet">
+							<h3 class="we__title">100% свежее мясо</h3>
+							<p class="we__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+						</li>
+						<li class="we__item we__item_hand">
+							<h3 class="we__title">Ручная сборка</h3>
+							<p class="we__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+						</li>
+						<li class="we__item we__item_natural">
+							<h3 class="we__title">Натуральные ингредиенты</h3>
+							<p class="we__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+						</li>
+					</ul>
 				</div>
-				<div class="section__right">
-					<h1 class="title">мы делаем</h1>
-					<h2 class="section__natural">натуральные бургеры</h2>
-				</div>
-			</section>
-			<aside class="scroll">
-				<ul class="points">
-					<li class="points__item points__item--active"></li>
-					<li class="points__item"></li>
-					<li class="points__item"></li>
-					<li class="points__item"></li>
-					<li class="points__item"></li>
-					<li class="points__item"></li>
-					<li class="points__item"></li>
-					<li class="points__item"></li>
-					<li class="points__item"></li>
-				</ul>
-			</aside>
-		</div>
-		<aside class="arrow-scroll"></aside>	
+			</div>
+		</section>
+
+		<section class="section section_reviews">
+			<ul class="clients">
+				<li class="clients__item">
+					<img src="img/photo-8.png" alt="клиент" class="clients__photo">
+					<div class="clients__desc">
+						<h1 class="clients__title">константин спилберг</h1>
+						<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a href="#" class="btn-learn-more">подробнее</a>
+					</div>
+				</li>
+				<li class="clients__item">
+					<img src="img/photo-6.png" alt="клиент" class="clients__photo">
+					<div class="clients__desc">
+						<h1 class="clients__title">константин спилберг</h1>
+						<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a href="#" class="btn-learn-more">подробнее</a>
+					</div>
+				</li>
+				<li class="clients__item">
+					<img src="img/photo-4.png" alt="клиент" class="clients__photo">
+					<div class="clients__desc">
+						<h1 class="clients__title">константин спилберг</h1>
+						<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a href="#" class="btn-learn-more">подробнее</a>
+					</div>
+				</li>
+				<li class="clients__item">
+					<img src="img/photo-2.png" alt="клиент" class="clients__photo">
+					<div class="clients__desc">
+						<h1 class="clients__title">константин спилберг</h1>
+						<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a href="#" class="btn-learn-more">подробнее</a>
+					</div>
+				</li>
+				<li class="clients__item">
+					<img src="img/photo-7.png" alt="клиент" class="clients__photo">
+					<div class="clients__desc">
+						<h1 class="clients__title">константин спилберг</h1>
+						<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a href="#" class="btn-learn-more">подробнее</a>
+					</div>
+				</li>
+				<li class="clients__item">
+					<img src="img/photo-5.png" alt="клиент" class="clients__photo">
+					<div class="clients__desc">
+						<h1 class="clients__title">константин спилберг</h1>
+						<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a href="#" class="btn-learn-more">подробнее</a>
+					</div>
+				</li>
+				<li class="clients__item">
+					<img src="img/photo-3.png" alt="клиент" class="clients__photo">
+					<div class="clients__desc">
+						<h1 class="clients__title">константин спилберг</h1>
+						<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a href="#" class="btn-learn-more">подробнее</a>
+					</div>
+				</li>
+				<li class="clients__item">
+					<img src="img/photo-1.png" alt="клиент" class="clients__photo">
+					<div class="clients__desc">
+						<h1 class="clients__title">константин спилберг</h1>
+						<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						<a href="#" class="btn-learn-more">подробнее</a>
+					</div>
+				</li>
+			</ul>
+		</section>
 	</div>
+	
+	<!-- fixed menu -->
+
+	<nav class="fixed-menu">
+			<ul class="points">
+			<li class="points__item points__item_active">
+				<a href="#" class="points__link"></a>
+			</li>
+			<li class="points__item">
+				<a href="#" class="points__link"></a>
+			</li>
+			<li class="points__item">
+				<a href="#" class="points__link"></a>
+			</li>
+			<li class="points__item">
+				<a href="#" class="points__link"></a>
+			</li>
+			<li class="points__item">
+				<a href="#" class="points__link"></a>
+			</li>
+			<li class="points__item">
+				<a href="#" class="points__link"></a>
+			</li>
+			<li class="points__item">
+				<a href="#" class="points__link"></a>
+			</li>
+			<li class="points__item">
+				<a href="#" class="points__link"></a>
+			</li>
+			<li class="points__item">
+				<a href="#" class="points__link"></a>
+			</li>
+			</ul>
+		</nav>
+		<nav class="fixed-menu">
+		<a href="#go" class="scroll-down"></a>
+		</nav>
 </body>
 </html>

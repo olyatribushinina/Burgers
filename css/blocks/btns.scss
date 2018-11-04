@@ -1,0 +1,31 @@
+.order {
+	text-decoration: none;
+	background-color: #e45028;
+	border-radius: 5px;
+	padding: 12px 18px;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: Ubuntu;
+	font-weight: medium;
+	font-size: 13px;
+}
+
+.btn-learn-more {
+	display: block;
+	text-decoration: none;
+	padding: 12px 14px 12px 14px;
+	border-radius: 5px;
+	background-color: #2f3234;
+	text-transform: uppercase;
+	font-family: Ubuntu;
+	font-weight: Medium;
+	font-size: 13px;
+	color: #fff;
+	width: 50%;
+	text-align: center;
+	line-height: 1;
+
+	&:hover {
+		background-color: #1f2122;
+	}
+}
