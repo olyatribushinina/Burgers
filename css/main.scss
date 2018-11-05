@@ -1,11 +1,11 @@
-@import url(layout/normalize.scss);
-@import url(layout/fonts.scss);
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700');
+@import "layout/normalize.scss";
+@import "layout/fonts.scss";
 
-@import url(layout/base.scss);
-@import url(blocks/arrow.scss);
-@import url(blocks/btns.scss);
-@import url(blocks/navigation.scss);
-@import url(blocks/fixed-menu.scss);
-@import url(blocks/sections.scss);
-@import url(blocks/titles.scss);
+@import "layout/base.scss";
+
+@import "blocks/arrow.scss";
+@import "blocks/btns.scss";
+@import "blocks/navigation.scss";
+@import "blocks/fixed-menu.scss";
+@import "blocks/sections.scss";
+@import "blocks/titles.scss";

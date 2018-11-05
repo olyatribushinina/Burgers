@@ -1,20 +1,34 @@
 @font-face {
-	font-family: Gagalin-Regular;
-	src: url(../../fonts/9903.otf);
-	font-style: normal;
+	font-family: 'Gagalin-Regular';
+	src: url('../../fonts/Gagalin-Regular.woff') format('woff');
 	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-	font-family: Lifehack Medium;
-	src: url(../../fonts/DearType - Lifehack Medium.otf);
-	font-style: normal;
+	font-family: 'Lifehack-Medium';
+	src: url('../../fonts/Lifehack-Medium.woff') format('woff');
 	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-	font-family: Lifehack;
-	src: url(../../fonts/DearType - Lifehack.otf);
+	font-family: 'Ubuntu';
+	src: url('../../fonts/Ubuntu-Light.woff') format('woff');
+	font-weight: 300;
 	font-style: normal;
-	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('../../fonts/Ubuntu-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('../../fonts/ubuntu-b-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
 }
