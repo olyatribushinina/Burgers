@@ -303,31 +303,31 @@ template {
 
 @font-face {
   font-family: 'Gagalin-Regular';
-  src: url("../../fonts/Gagalin-Regular.woff") format("woff");
+  src: url("../fonts/Gagalin-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Lifehack-Medium';
-  src: url("../../fonts/Lifehack-Medium.woff") format("woff");
+  src: url("../fonts/Lifehack-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../../fonts/Ubuntu-Light.woff") format("woff");
+  src: url("../fonts/Ubuntu-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../../fonts/Ubuntu-Medium.woff") format("woff");
+  src: url("../fonts/Ubuntu-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../../fonts/ubuntu-b-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-b-webfont.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
 
@@ -421,7 +421,7 @@ html, body {
   left: 50%;
   width: 33px;
   height: 14px;
-  background-image: url(../../img/arrow-scroll.png);
+  background-image: url(../img/arrow-scroll.png);
   background-position: center center;
   background-repeat: no-repeat; }
 
@@ -527,7 +527,7 @@ html, body {
     transform: translate(-50%, -50%); }
 
 .section_welcome {
-  background: url(../../img/texture.png) center center no-repeat;
+  background: url(../img/texture.png) center center no-repeat;
   background-size: cover; }
 
 .welcome__content {
@@ -561,7 +561,7 @@ html, body {
   margin-left: 10px; }
 
 .section_about {
-  background: url(../../img/bg.png) center center no-repeat;
+  background: url(../img/bg.png) center center no-repeat;
   background-size: cover; }
 
 .we {
@@ -591,7 +591,7 @@ html, body {
     content: "";
     width: 100px;
     height: 100px;
-    background: url(../../img/meat.png);
+    background: url(../img/meat.png);
     background-position: center center;
     background-repeat: no-repeat; }
   .we__item_hand:before {
@@ -600,7 +600,7 @@ html, body {
     content: "";
     width: 100px;
     height: 100px;
-    background: url(../../img/hand.png);
+    background: url(../img/hand.png);
     background-position: center center;
     background-repeat: no-repeat; }
   .we__item_natural:before {
@@ -609,7 +609,7 @@ html, body {
     content: "";
     width: 100px;
     height: 100px;
-    background: url(../../img/natural.png);
+    background: url(../img/natural.png);
     background-position: center center;
     background-repeat: no-repeat; }
 
