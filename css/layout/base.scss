@@ -49,7 +49,7 @@ html, body {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 10px;
+  margin: 10px 0 0 0;
  }
 
 .header__right {
@@ -72,6 +72,7 @@ html, body {
 }
 
 [class*='title'] {
+  text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -79,7 +80,7 @@ html, body {
 
 .title {
   font-family: Gagalin;
-  font-weight: regular;
+  font-weight: 300;
   font-size: 72px;
   color: #f8b43a;
   margin: 0;

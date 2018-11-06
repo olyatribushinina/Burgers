@@ -5,11 +5,12 @@
 .welcome__title {
 	display: block;
 	font-family: Lifehack;
-	font-weight: regular;
+	font-weight: 300;
 	font-size: 65px;
 	color: #fff;
 	padding-top: 20px;
 	line-height: 1;
+	text-transform: none;
 }
 
 .title__about {
@@ -22,14 +23,14 @@
 
 .we__title {
 	font-family: Lifehack;
-	font-weight: Medium;
-	font-size: 24.12px;
+	font-weight: 300;
+	font-size: 24px;
+	text-transform: none;
 }
 
 .clients__title {
 	font-family: Gagalin;
-	font-weight: Regular;
+	font-weight: 300;
 	font-size: 14px;
-	text-transform: uppercase;
 	color: #fff;
 }

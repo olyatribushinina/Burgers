@@ -381,7 +381,7 @@ html, body {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 10px; }
+  margin: 10px 0 0 0; }
 
 .header__right {
   display: -webkit-box;
@@ -401,6 +401,7 @@ html, body {
   min-height: 650px; }
 
 [class*='title'] {
+  text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -408,7 +409,7 @@ html, body {
 
 .title {
   font-family: Gagalin;
-  font-weight: regular;
+  font-weight: 300;
   font-size: 72px;
   color: #f8b43a;
   margin: 0; }
@@ -433,7 +434,7 @@ html, body {
   color: #fff;
   text-transform: uppercase;
   font-family: Ubuntu;
-  font-weight: medium;
+  font-weight: 500;
   font-size: 13px; }
 
 .btn-learn-more {
@@ -441,15 +442,17 @@ html, body {
   text-decoration: none;
   padding: 12px 14px 12px 14px;
   border-radius: 5px;
+  border: none;
   background-color: #2f3234;
   text-transform: uppercase;
   font-family: Ubuntu;
-  font-weight: Medium;
+  font-weight: 500;
   font-size: 13px;
   color: #fff;
   width: 50%;
   text-align: center;
-  line-height: 1; }
+  line-height: 1;
+  cursor: pointer; }
   .btn-learn-more:hover {
     background-color: #1f2122; }
 
@@ -487,7 +490,7 @@ html, body {
   text-decoration: none;
   color: #fff;
   font-family: Ubuntu;
-  font-weight: Medium;
+  font-weight: 500;
   font-size: 13px;
   text-transform: uppercase; }
 
@@ -571,18 +574,12 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
 
 .we__item {
-  width: 33.3%;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  width: 33%;
   text-align: center;
   line-height: 1; }
   .we__item_meet:before {
@@ -615,7 +612,7 @@ html, body {
 
 .we__desc {
   font-family: Ubuntu;
-  font-weight: Light;
+  font-weight: 300;
   font-size: 14px;
   color: #828180;
   line-height: 1.5;
@@ -685,11 +682,12 @@ html, body {
 .welcome__title {
   display: block;
   font-family: Lifehack;
-  font-weight: regular;
+  font-weight: 300;
   font-size: 65px;
   color: #fff;
   padding-top: 20px;
-  line-height: 1; }
+  line-height: 1;
+  text-transform: none; }
 
 .title__about {
   margin: 0;
@@ -700,12 +698,12 @@ html, body {
 
 .we__title {
   font-family: Lifehack;
-  font-weight: Medium;
-  font-size: 24.12px; }
+  font-weight: 300;
+  font-size: 24px;
+  text-transform: none; }
 
 .clients__title {
   font-family: Gagalin;
-  font-weight: Regular;
+  font-weight: 300;
   font-size: 14px;
-  text-transform: uppercase;
   color: #fff; }
