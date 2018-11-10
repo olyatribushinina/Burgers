@@ -13,9 +13,6 @@
 	margin-left: auto;
 }
 
-// .accordeon__over {
-// 	background: rgba(0, 0, 0, 0.80);
-// }
 
 .accordeon__list_menu {
 	list-style: none;
@@ -25,32 +22,47 @@
 	height: 100vh;
 }
 
-
-.accordeon__item_meet {
+.accordeon__item-menu {
+	display: flex;
 	width: 33.3%;
+}
+
+.accordeon__item-menu_meet {
 	background: url(../img/accordeon_hunter.jpg) no-repeat;
 	background-size: cover;
 	background-position: center center;
 }
 
-.accordeon__item_veg {
-	width: 33.3%;
+.accordeon__item-menu_veg {
 	background: url(../img/accordeon_veg.jpg) no-repeat;
 	background-size: cover;
 	background-position: 60% center;
 }
 
-.accordeon__item_diet {
-	width: 33.3%;
+.accordeon__item-menu_diet {
 	background: url(../img/accordeon_diet.jpg) no-repeat;
 	background-size: cover;
 	background-position: 60% center;
 }
 
+.accordeon__over {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(47,50,52,.93)
+}
+
 .accordeon__button_vertical {
-	// padding: 40px 25px;
   	background: transparent;
   	border-color: transparent;
+	width: 100%;
+	height: 100%;
+	transform: rotate(-90deg);
+	white-space: nowrap;
+	font-family: Gagalin;
+	  font-weight: 300;
+	  font-size: 72px;
+	  color: #f8b43a;
+
 
   	&:focus {
   		outline: none;
@@ -63,11 +75,10 @@
 	 // }
 }
 
-.accordeon__menu-desc {
-	// width: 540px;
-	height: 100%;
-	padding: 30px 60px;
-	// background: rgba(0, 0, 0, 0.80);
+.accordeon__hidden {
+	// padding: 30px 60px;
+	background-color: rgba(47,50,52,.93);
 	width: 0;
 	overflow: hidden;
+	transition: 1s;
 }
