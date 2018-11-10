@@ -1,0 +1,171 @@
+.section_order {
+  background: url(../img/form_bg.png) center center no-repeat;
+  background-size: cover;
+ }
+
+ .conteiner_form {
+ 	flex-direction: column;
+ 	align-items: center;
+	justify-content: center;
+ }
+
+// .container__inner {
+// 	width: 100%;
+// 	margin: 0 auto;
+// }
+
+.form {
+	padding: 5% 5%;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	font-family: Ubuntu;
+	font-weight: 300;
+	font-size: 14px;
+	color: #fff;
+	
+}
+
+.form__input-title {
+	display: inline-flex;
+	margin-bottom: 10px;
+	text-transform: none;
+}
+
+.form__column {
+	flex: 1;
+	margin-right: 19px;
+}
+
+.form__column:last-child {
+	margin-right: 0;
+}
+
+.form__row {
+	margin-bottom: 17px;
+	display: flex;
+}
+
+.form__input {
+	flex: 1;
+	margin-right: 19px;
+}
+
+.form__input:last-child {
+	margin-right: 0;
+}
+
+.form__input-elem {
+	width: 100%;
+	padding: 9px 12px;
+	border: none;
+	border-radius: 5px;
+	border: 1px solid transparent;
+
+	&:focus {
+		outline: none;
+		border-color: #f8b43a;
+	}
+}
+
+.form__input-elem_textarea {
+	resize: vertical;
+	height: 109px;
+}
+
+.form__radio {
+	display: inline-flex;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.form__radio-real {
+	display: none;
+}
+
+// не идентифицирует "checked"
+
+.form__radio-real:checked ~ .form__radio-visible:after {   
+	opacity: 1;
+}
+
+.form__radio-visible {
+	width: 15px;
+	height: 15px;
+	border: 1px solid #red;
+	border-radius: 50%;
+	background-image: linear-gradient(to top, #ededed, #fff);
+	position: relative;
+	margin-right: 10px;
+
+	&:after {
+		display: block;
+		content: "";
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background: #red;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+	}
+}
+
+.form__checkbox {
+	display: inline-flex;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.form__checkbox-real {
+	display: none;
+
+	&:checked ~ .form__checkbox-visible:after {   
+	opacity: 1;
+	}
+
+}
+
+.form__checkbox-visible {
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	position: relative;
+	margin-right: 10px;
+
+	&:after {
+		display: block;
+		content: "";
+		background: url(../img/checkbox.png);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+	}
+}
+
+.order_form {
+	border-color: transparent;
+	cursor: pointer;
+	margin-right: 20px;
+
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.form__button-clear {
+	background: transparent;
+	border-color: transparent;
+	cursor: pointer;
+	color: #fff;
+
+	&:focus {
+		outline: none;
+	}
+}

@@ -3,9 +3,26 @@
 @import "layout/fonts";
 @import "layout/base";
 
+// //breakpoints
+
+// $tables 940px;
+// $phones 320px;
+
+//media
+
+@import "blocks/header.scss";
 @import "blocks/arrow.scss";
 @import "blocks/btns.scss";
 @import "blocks/navigation.scss";
 @import "blocks/fixed-menu.scss";
-@import "blocks/sections.scss";
+@import "blocks/section_welcome.scss";
 @import "blocks/titles.scss";
+@import "blocks/section_best.scss";
+@import "blocks/section_team.scss";
+@import "blocks/section_reviews.scss";
+@import "blocks/section_slider.scss";
+@import "blocks/section_how-work.scss";
+@import "blocks/section_order.scss";
+@import "blocks/section_map.scss";
+@import "blocks/section_menu.scss";
+@import "blocks/footer.scss";

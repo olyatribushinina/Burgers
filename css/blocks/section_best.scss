@@ -1,0 +1,64 @@
+.section_about {
+  background: url(../img/bg.png) center center no-repeat;
+  background-size: cover;
+ }
+
+.we {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+
+	.we__item {
+	width: 33%;
+	text-align: center;
+	line-height: 1;
+
+
+	&_meet:before {
+	margin: 0 auto;
+	display: block;
+	content: "";
+	width: 100px;
+	height: 100px;
+	background: url(../img/meat.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	}
+
+
+	&_hand:before {
+	margin: 0 auto;
+	display: block;
+	content: "";
+	width: 100px;
+	height: 100px;
+	background: url(../img/hand.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	}
+
+
+	&_natural:before {
+	margin: 0 auto;
+	display: block;
+	content: "";
+	width: 100px;
+	height: 100px;
+	background: url(../img/natural.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	}
+
+}
+
+.we__desc {
+	font-family: Ubuntu;
+	font-weight: 300;
+	font-size: 14px;
+	color: #828180;
+	line-height: 1.5;
+	user-select: none;
+}
