@@ -8,11 +8,10 @@
  	align-items: center;
 	justify-content: center;
  }
-
-// .container__inner {
-// 	width: 100%;
-// 	margin: 0 auto;
-// }
+ 
+.title_form {
+	margin-top: 20%;
+}
 
 .form {
 	padding: 5% 5%;
@@ -22,20 +21,30 @@
 	justify-content: center;
 	font-family: Ubuntu;
 	font-weight: 300;
-	font-size: 14px;
+	font-size: rem(14px);
 	color: #fff;
+
+	@include tablets {
+    flex-direction: column;
+    margin-left: 0;
+  }
 	
 }
 
 .form__input-title {
 	display: inline-flex;
-	margin-bottom: 10px;
+	margin-bottom: rem(10px);
 	text-transform: none;
 }
 
 .form__column {
 	flex: 1;
-	margin-right: 19px;
+	margin-right: rem(19px);
+
+	@include tablets {
+    width: 100%;
+    margin-left: 0;
+    }
 }
 
 .form__column:last-child {
@@ -43,13 +52,13 @@
 }
 
 .form__row {
-	margin-bottom: 17px;
+	margin-bottom: rem(17px);
 	display: flex;
 }
 
 .form__input {
 	flex: 1;
-	margin-right: 19px;
+	margin-right: rem(19px);
 }
 
 .form__input:last-child {
@@ -58,10 +67,10 @@
 
 .form__input-elem {
 	width: 100%;
-	padding: 9px 12px;
+	padding: rem(9px) rem(12px);
 	border: none;
-	border-radius: 5px;
-	border: 1px solid transparent;
+	border-radius: rem(5px);
+	border: rem(1px) solid transparent;
 
 	&:focus {
 		outline: none;
@@ -71,13 +80,13 @@
 
 .form__input-elem_textarea {
 	resize: vertical;
-	height: 109px;
+	height: rem(109px);
 }
 
 .form__radio {
 	display: inline-flex;
 	vertical-align: middle;
-	margin-right: 20px;
+	margin-right: rem(20px);
 }
 
 .form__radio-real {
@@ -91,19 +100,19 @@
 }
 
 .form__radio-visible {
-	width: 15px;
-	height: 15px;
-	border: 1px solid #red;
+	width: rem(15px);
+	height: rem(15px);
+	border: rem(1px) solid #red;
 	border-radius: 50%;
 	background-image: linear-gradient(to top, #ededed, #fff);
 	position: relative;
-	margin-right: 10px;
+	margin-right: rem(10px);
 
 	&:after {
 		display: block;
 		content: "";
-		width: 7px;
-		height: 7px;
+		width: rem(7px);
+		height: rem(7px);
 		border-radius: 50%;
 		background: #red;
 		position: absolute;
@@ -117,7 +126,7 @@
 .form__checkbox {
 	display: inline-flex;
 	vertical-align: middle;
-	margin-right: 20px;
+	margin-right: rem(20px);
 }
 
 .form__checkbox-real {
@@ -130,28 +139,31 @@
 }
 
 .form__checkbox-visible {
-	width: 15px;
-	height: 15px;
+	width: rem(15px);
+	height: rem(15px);
 	background: #fff;
 	position: relative;
-	margin-right: 10px;
+	margin-right: rem(10px);
 
 	&:after {
 		display: block;
 		content: "";
-		background: url(../img/checkbox.png);
+		background: url(../img/checkbox.png) 50% no-repeat transparent;
+		background-size: contain;
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		width: rem(11px);
+		height: rem(9px);
+		// top: 50%;
+		// left: 50%;
+		// transform: translate(-50%, -50%);
 		opacity: 0;
 	}
 }
 
 .order_form {
-	border-color: transparent;
+	border: 0;
 	cursor: pointer;
-	margin-right: 20px;
+	margin-right: rem(20px);
 
 
 	&:focus {

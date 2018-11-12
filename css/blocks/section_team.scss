@@ -8,28 +8,36 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-  min-width: 350px;
-  height: 100vh;
-  margin-top: 10%;
-  margin-left: 20%;
+	width: 50%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.80);
+
+	@include tablets {
+    left: 0;
+    width: 100%;
+  }
 }
 
 .content_team {
-	width: 50%;
 	height: 100%;
+	margin-top: 10%;
 	margin-left: auto;
-	background: rgba(0, 0, 0, 0.80);
+	padding-left: 30%;
+
+	@include tablets {
+    text-align: center;
+  }
 }
 
-.burger_team {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: 0 0;
+
+.title_accordeon-menu {
+	display: inline-flex;
+	transform: rotate(-90deg);
+	white-space: nowrap;
 }
 
 .accordeon_team {
-	margin-top: 40px;
+	margin-top: rem(40px);
 }
 
 .accordeon__list {
@@ -38,43 +46,78 @@
 	padding: 0;
 }
 
-.accordeon__item {
-	margin-bottom: 30px
-}
 
-.accordeon__button {
-	border: transparent;
-	background: transparent;
-	cursor: pointer;
+.title_crewman-name {
+	font-size: rem(14px);
+	color: #fff;
+	position: relative;
 
-
-	&:focus {
-		~.accordeon__crewman {
-			height: 100%;
-			overflow: none;
-		}
-
-		.title_crewman-name {
-			display: block;
-			color: #f8b43a;
-		}
+	&:before {
+		display: block;
+		content: "";
+		width: rem(9px);
+		height: rem(9px);
+		background: url(../img/Polygon_down.png) no-repeat;
+		position: absolute;
+		top: 40%;
+		left: rem(-20px);
 	}
 }
 
+.crewman_position {
+	display: block;
+	font-weight: 700;
+	margin-bottom: rem(10px);
+}
+
+
+.accordeon__item {
+	margin-bottom: rem(30px);
+}
+
+.accordeon__button {
+	border: none;
+	outline: none;
+	background: transparent;
+	cursor: pointer;
+
+	&:focus {
+		.title_crewman-name {
+		color: #f8b43a;
+		} 
+	}
+	
+
+	&:focus 
+		+.accordeon__crewman {
+			height: 100%;
+			overflow: none;
+			
+		}
+	
+	&:focus {
+		.title_crewman-name:before {
+			transform: rotate(-180deg);
+		}
+	}
+
+}
+
+
 .accordeon__crewman {
 	display: flex;
-	padding-top: 15px;
+	padding-top: rem(15px);
 	height: 0;
 	overflow: hidden;
 }
 
 .crewman_pic {
-	margin: 0 20px 0 0;
+	margin: 0 rem(20px) 0 0;
 }
 
 .crewman_photo {
-	width: 100px;
-	height: 100px;
+	width: rem(100px);
+	height: rem(100px);
 	object-fit: cover;
 	border-radius: 50%;
 }
@@ -83,7 +126,7 @@
 	width: 50%;
 	font-family: Ubuntu;
 	font-weight: 300;
-  	font-size: 14px;
+  	font-size: rem(14px);
   	line-height: 1.5;
   	color: #fff;
 }

@@ -3,26 +3,52 @@
   background-size: cover;
  }
 
+.about__content {
+	text-align: center;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+}
+
+.title__about {
+	text-align: center;
+	color: #2f3234;
+	margin-bottom: rem(80px);
+	padding-top: rem(115px);
+}
+
 .we {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	display: flex;
 	align-items: center;
+	
+	@include phones {
+    flex-direction: column;
+  }
 }
 
-	.we__item {
+.we__item {
 	width: 33%;
 	text-align: center;
 	line-height: 1;
+	margin-bottom: rem(50px);
+	padding: 0 rem(15px);
+	display: flex;
+	flex-direction: column;
+
+  	@include phones {
+    flex-direction: row;
+  }
 
 
 	&_meet:before {
 	margin: 0 auto;
 	display: block;
 	content: "";
-	width: 100px;
-	height: 100px;
+	width: rem(100px);
+	height: rem(100px);
 	background: url(../img/meat.png);
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -33,8 +59,8 @@
 	margin: 0 auto;
 	display: block;
 	content: "";
-	width: 100px;
-	height: 100px;
+	width: rem(100px);
+	height: rem(100px);
 	background: url(../img/hand.png);
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -45,8 +71,8 @@
 	margin: 0 auto;
 	display: block;
 	content: "";
-	width: 100px;
-	height: 100px;
+	width: rem(100px);
+	height: rem(100px);
 	background: url(../img/natural.png);
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -54,10 +80,17 @@
 
 }
 
+.we__title {
+	font-family: Lifehack;
+	font-weight: 300;
+	font-size: rem(24px);
+	text-transform: none;
+}
+
 .we__desc {
 	font-family: Ubuntu;
 	font-weight: 300;
-	font-size: 14px;
+	font-size: rem(14px);
 	color: #828180;
 	line-height: 1.5;
 	user-select: none;

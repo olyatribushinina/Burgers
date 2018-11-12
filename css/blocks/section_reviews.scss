@@ -1,6 +1,7 @@
 .clients {
 	list-style: none;
 	height: 100%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -16,7 +17,12 @@
 	&:hover .clients__desc {
 		 opacity: 1;
 		 transition: opacity .5s;
-	}	
+	}
+
+	@include tablets {
+    width: 50%;
+    height: 25%;
+  }	
 }
 
 
@@ -31,10 +37,16 @@
 	opacity: 0;
 	transition: opacity .5s;
 	line-height: 0;
-	padding-left: 20px;
-	padding-top: 40px;
+	padding-left: rem(20px);
+	padding-top: rem(40px);
 }
 
+.clients__title {
+	font-family: Gagalin;
+	font-weight: 300;
+	font-size: rem(14px);
+	color: #fff;
+}
 
 .clients__photo {
 	width: 100%;
@@ -42,12 +54,10 @@
 	object-fit: cover;
 }
 
-
-
 .clients__text {
 	font-family: Ubuntu;
 	font-weight: Light;
-	font-size: 14px;
+	font-size: rem(14px);
 	color: #fff;
 	line-height: 2;
 }
