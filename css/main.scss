@@ -8,10 +8,10 @@
 
 
 // breakpoints
-$desctop: rem(1200px);
-$laptop: rem(992px);
-$tablets: rem(768px);
-$phones: rem(480px);
+$desctop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
 
 //media
 @import "layout/media";

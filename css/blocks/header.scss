@@ -12,6 +12,11 @@
   flex: 1;
   justify-content: flex-start;
   margin: rem(10px) 0 0 0;
+
+   @include tablets() {
+      margin-left: rem(25px); 
+  }
+
  }
 
 .header__right {
@@ -19,9 +24,22 @@
   justify-content: flex-end;
   align-items: flex-start;
   margin-top: rem(28px);
-
-  @include tablets() {
-    display: none;
-  }
  }
+
+.navigation__item {
+  
+    @include tablets() {
+      display: none;
+  }
+
+    &:last-child {
+
+      @include tablets() {
+        display: flex;
+        position: absolute;
+        right: rem(-580px);
+      }
+  }
+}
+
 

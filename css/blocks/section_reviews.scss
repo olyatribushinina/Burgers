@@ -21,7 +21,7 @@
 
 	@include tablets {
     width: 50%;
-    height: 25%;
+    height: 25vh;
   }	
 }
 
@@ -52,6 +52,11 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+
+	@include tablets() {
+   			object-fit: cover;
+   			object-position: 40% 40%;
+  		}
 }
 
 .clients__text {

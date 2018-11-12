@@ -3,18 +3,6 @@
   box-sizing: border-box; 
 }
 
-html {
-  font-size: rem(16px);
-}
-
-// @include tablets {
-//   font-size: rem(15px);
-// }
-
-// @include phones {
-//   font-size: rem(13px);
-// }
-
 
 html, body {
   width: 100%;
@@ -30,6 +18,14 @@ html, body {
   line-height: 1.42;
   font-size: rem(14px);
   color: #fff;
+  
+  //  @include tablets() {
+  //   font-size: 15px;
+  // }
+
+  // @include phones() {
+  //   font-size: 13px;
+  // }
 }
 
 .wrapper {
@@ -48,10 +44,6 @@ html, body {
   display: flex;
   flex-direction: column;
 }
-
-// .content {
-//   width: 100%;
-// }
 
 .section {
   width: 100%;

@@ -3,13 +3,13 @@
 }
 
 @mixin tablets {
-	@media screen and (max-width: $tablets) {
+	@media (max-width: $tablets) {
 		@content;
 	}
 }
 
 @mixin phones {
-	@media screen and (max-width: $phones) {
+	@media (max-width: $phones) {
 		@content;
 	}
 }

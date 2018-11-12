@@ -11,6 +11,11 @@
  
 .title_form {
 	margin-top: 20%;
+
+	@include tablets() {
+   			margin-bottom: rem(20px);
+			margin-top: 15%;
+  		}
 }
 
 .form {
@@ -26,7 +31,10 @@
 
 	@include tablets {
     flex-direction: column;
+    justify-content: flex-start;
     margin-left: 0;
+    padding: 0;
+    width: 75%;
   }
 	
 }
@@ -42,8 +50,9 @@
 	margin-right: rem(19px);
 
 	@include tablets {
-    width: 100%;
-    margin-left: 0;
+	    width: 100%;
+	    margin-left: 0;
+	    flex: 0.1;
     }
 }
 

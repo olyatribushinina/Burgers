@@ -1,5 +1,6 @@
 .hamburger-menu__link {
     position: relative;
+    z-index: 6;
     display: none;
 
     @include tablets() {
@@ -9,6 +10,7 @@
 
  .hamburger-menu-link__item {
   &, &:before, &:after {
+    display: block;
     background: #fff;
     width: rem(24px);
     height: rem(5px);
@@ -17,19 +19,19 @@
     margin-top: rem(10px);
   }
 
-  &:before, &:after {
-    content: "";
-    display: block;
-    position: absolute;
-  }
+  // &:before, &:after {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  // }
 
-  &:before {
-    top: 100%;
-    margin-top: rem(4px);
-  }
+  // &:before {
+  //   // top: 100%;
+  //   margin-top: rem(4px);
+  // }
 
-  &:after {
-    bottom: 100%;
-    margin-bottom: rem(4px);
-  }
+  // &:after {
+  //   bottom: 100%;
+  //   margin-bottom: rem(4px);
+//   // }
 }

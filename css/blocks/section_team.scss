@@ -26,9 +26,10 @@
 
 	@include tablets {
     text-align: center;
+    margin-left: 0;
+    padding: 0
   }
 }
-
 
 .title_accordeon-menu {
 	display: inline-flex;
@@ -38,6 +39,11 @@
 
 .accordeon_team {
 	margin-top: rem(40px);
+
+	@include tablets() {
+   			text-align: left;
+   			margin-left: 40%;
+  		}
 }
 
 .accordeon__list {
