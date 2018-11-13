@@ -1,45 +1,59 @@
 .header {
+  width: 100px;
   position: absolute;
   top: rem(12px);
   display: flex;
   align-items: center;
-  justify-content: space-between;
   z-index: 2;
+
 }
 
 .header__left {
   display: flex;
-  flex: 1;
   justify-content: flex-start;
   margin: rem(10px) 0 0 0;
 
    @include tablets() {
-      margin-left: rem(25px); 
+      margin-left: rem(25px);
+      flex: 1;
+      position: relative;
   }
-
- }
+}
 
 .header__right {
   display: flex;
-  justify-content: flex-end;
+  margin-left: 46px;
   align-items: flex-start;
   margin-top: rem(28px);
- }
-
-.navigation__item {
   
-    @include tablets() {
+  @include tablets() {
       display: none;
-  }
-
-    &:last-child {
-
-      @include tablets() {
-        display: flex;
-        position: absolute;
-        right: rem(-580px);
-      }
+      
   }
 }
+
+.tablets-block {
+  padding-top: rem(20px);
+  padding-left: rem(30px);
+
+
+  @include tablets() {
+      display: flex;
+      position: absolute;
+      left: 34.875rem;
+  }
+
+  @include phones() {
+      display: flex;
+      position: absolute;
+      left: rem(270px);
+  }
+
+}
+
+
+
+
+      
 
 

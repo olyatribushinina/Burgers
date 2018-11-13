@@ -16,6 +16,7 @@
 			<section class="section section_welcome">
 				<div class="container container__welcome">
 					<header class="header">
+
 						<figure class="header__left">
 							<img src="img/logo.png" alt="логотип - Mr Burger" class="logo__pic">          
 						</figure>
@@ -42,17 +43,16 @@
 								<li class="navigation__item">
 									<a href="#contacts" class="navigation__link">контакты</a> 
 								</li>
-								<li class="navigation__item navigation__item_none"> 
-									<a href="#order" class="order">заказать</a> 
-								</li>
 							</ul>
 						</nav>
-						
+						<aside class="tablets-block">
+						<a href="#order" class="order order_tablets-block">заказать</a> 
+						<button type="button" class="hamburger-menu-btn">
+							<div class="hamburger-menu-btn__elem"></div>
+						</button>
+						</aside>
 					</header>
-					<a class="hamburger-menu__link">
-						<div class="hamburger-menu__item"></div>
-					</a>
-
+					
 
 					<div class="content content_welcome">
 						<div class="left">
@@ -82,15 +82,15 @@
 						<h2 class="title title__about">мы лучшие</h2>	
 						<ul class="we">
 							<li class="we__item we__item_meet">
-								<h3 class="we__title">100% свежее мясо</h3>
+								<h3 class="we__title we__title--meat">100% свежее мясо</h3>
 								<p class="we__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
 							</li>
 							<li class="we__item we__item_hand">
-								<h3 class="we__title">Ручная сборка</h3>
+								<h3 class="we__title we__title--hand">Ручная сборка</h3>
 								<p class="we__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
 							</li>
 							<li class="we__item we__item_natural">
-								<h3 class="we__title">Натуральные ингредиенты</h3>
+								<h3 class="we__title we__title--natural">Натуральные ингредиенты</h3>
 								<p class="we__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
 							</li>
 						</ul>
@@ -356,7 +356,6 @@
 				<div class="container conteiner_form">
 					<h6 class="title title_form">закажите доставку</h6>
 					<form action="" class="form">
-						<!-- <div class="form__container"> -->
 							<div class="form__column">
 								<div class="form__row">
 									<label class="form__input">

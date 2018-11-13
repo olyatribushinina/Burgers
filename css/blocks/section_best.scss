@@ -14,8 +14,12 @@
 .title__about {
 	text-align: center;
 	color: #2f3234;
-	margin-bottom: rem(80px);
 	padding-top: rem(115px);
+
+	@include phones {
+    	margin: 0;
+		padding-top: rem(80px);	
+  }
 }
 
 .we {
@@ -25,9 +29,11 @@
 	padding: 0;
 	display: flex;
 	align-items: center;
+	text-align: center;
 	
 	@include phones {
     	flex-direction: column;
+    	padding-top: rem(20px);
   }
 }
 
@@ -38,10 +44,19 @@
 	margin-bottom: rem(50px);
 	padding: 0 rem(15px);
 	display: flex;
+	flex: 1;
 	flex-direction: column;
 
   	@include phones {
-    flex-direction: row;
+  	position: relative;
+    flex-direction: none;
+    width: auto;
+    margin-bottom: 0;
+
+    &:before {
+    	position: absolute;
+   		top: rem(30px);
+    }
   }
 
 
@@ -87,6 +102,24 @@
 	font-weight: 300;
 	font-size: rem(24px);
 	text-transform: none;
+	text-align: auto;
+
+	@include phones {
+		margin-bottom: 0;
+
+	   &--meat {
+	   	margin-left: rem(12px);
+	   }
+
+	   &--hand {
+	   	margin-left: rem(-30px);
+	   }
+
+	   &--natural {
+	   	margin-left: rem(125px);
+	   }
+	    
+	}
 }
 
 .we__desc {
@@ -96,4 +129,10 @@
 	color: #828180;
 	line-height: 1.5;
 	user-select: none;
+	text-align: left;
+	padding: 0;
+
+	@include phones {
+    margin-left: rem(130px);
+	}
 }

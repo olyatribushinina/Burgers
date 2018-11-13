@@ -13,12 +13,22 @@
    		display: flex;
    		flex-direction: column;
    		align-items: center;
-  		}
+   		padding: rem(40px) 0 rem(40px) 0;
+  	}
+
+  	@include phones() {
+   		padding: 0;
+  	}
  }
 
 .left_slider {
 	margin-top: 5%;
 	position: relative;
+
+	@include tablets() {
+   		width: 100%;
+   		padding-left: 120px; 
+  	}
 }
 
 .slider-image {
@@ -28,6 +38,10 @@
   	left: 50%;
   	transform: translateX(-50%);
 	object-fit: cover;
+
+	@include tablets() {
+   		left: 32%;
+  	}
 }
 
 
@@ -40,12 +54,18 @@
 	position: relative;
 	cursor: pointer;
 
+	@include tablets() {
+   		width: 90px;
+   		height: 110px;
+  	}
+
 	&:after {
 		width: rem(46px);
 		height: rem(46px);
 		display: block;
 		position: absolute;
 		background: url(../img/burger.png) center center no-repeat;
+		background-size: contain;
 		content: "";
 		top: 40%;
 		left: 50%;
@@ -59,9 +79,18 @@
 		}
 
 
-		@include tablets() {
-   			right: 40%;
-  		}
+	@include phones() {
+   		right: 70%;
+   		width: rem(90px);
+		height: rem(90px);
+  	}
+
+}
+
+.consist-btn {
+	@include phones() {
+   		margin-left: rem(20px);
+  	}
 }
 
 .consist-btn__text {
@@ -182,8 +211,13 @@
 
 	@include tablets() {
    		position: absolute;
-		right: 0;
-		top: 0;	
+		right: rem(135px);
+   		top: rem(-15px);
+  	}
+
+  	@include phones() {
+   		right: rem(20px);
+   		top: rem(-15px);
   	}
 }
 
@@ -209,6 +243,10 @@
 	   justify-content: center;			
 	}
 
+	@include phones() {
+   			width: 100%;
+  		}
+
 }
 
 .title_slider-white {
@@ -226,6 +264,10 @@
 	font-size: rem(14px);
 	font-weight: 300;
 	line-height: 2;
+
+	@include phones() {
+   		text-align: center;
+  	}
 }
 
 .title_slider-red {
