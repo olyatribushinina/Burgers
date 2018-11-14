@@ -10,15 +10,14 @@
 <body>
 
 	<div class="wrapper">
-		<div class="maincontent">
+		<!-- <div class="maincontent"> -->
 			
 			<!-- Первая секция -->
 			<section class="section section_welcome">
 				<div class="container container__welcome">
 					<header class="header">
-
 						<figure class="header__left">
-							<img src="img/logo.png" alt="логотип - Mr Burger" class="logo__pic">          
+							<img src="img/logo.png" alt="логотип - Mr Burger" class="logo__pic"> 
 						</figure>
 						<nav class="header__right">
 							<ul class="navigation">
@@ -53,8 +52,8 @@
 						</aside>
 					</header>
 					
-
-					<div class="content content_welcome">
+					<div class="container">
+					<div class="content_welcome">
 						<div class="left">
 							<img src="img/drops.png" alt="Гамбургер" class="welcome-image">
 						</div>
@@ -66,6 +65,7 @@
 						</div>
 					</div>
 				</div>
+				</div>
 				<div class="arrow-down">
 					<a href="#best" class="arrow-down__hesh">
 						<svg class="arrow-down__icon">
@@ -73,25 +73,47 @@
 				        </svg>
 					</a>
 				</div>
+				
 			</section>
 
 			<!-- Лучшие -->
 			<section class="section section_about" id="best">
 				<div class="container">
-					<div class="about__content">
+					<div class="content_about">
 						<h2 class="title title__about">мы лучшие</h2>	
 						<ul class="we">
-							<li class="we__item we__item_meet">
-								<h3 class="we__title we__title--meat">100% свежее мясо</h3>
-								<p class="we__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+							<li class="we__item">
+								<div class="we__item-icon">
+									<svg class="best__icon">
+					            		<use xlink:href="sprite/sprite.svg#meat"></use>
+					        		</svg>
+				        		</div>
+				        		<div class="we__item-desc">
+									<h3 class="we__title">100% свежее мясо</h3>
+									<p class="we__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+								</div>
 							</li>
-							<li class="we__item we__item_hand">
-								<h3 class="we__title we__title--hand">Ручная сборка</h3>
-								<p class="we__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+							<li class="we__item">
+								<div class="we__item-icon">
+									<svg class="best__icon">
+					            		<use xlink:href="sprite/sprite.svg#hand"></use>
+					       			 </svg>
+								</div>
+								<div class="we__item-desc">
+									<h3 class="we__title">Ручная сборка</h3>
+									<p class="we__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+								</div>
 							</li>
-							<li class="we__item we__item_natural">
-								<h3 class="we__title we__title--natural">Натуральные ингредиенты</h3>
-								<p class="we__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+							<li class="we__item">
+								<div class="we__item-icon">
+									<svg class="best__icon">
+					            		<use xlink:href="sprite/sprite.svg#natural"></use>
+					        		</svg>
+				        		</div>
+								<div class="we__item-desc">
+									<h3 class="we__title we__title--natural">Натуральные ингредиенты</h3>
+									<p class="we__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -159,13 +181,16 @@
 			<!-- Команда -->
 			<section class="section section_team" id="team">
 				<div class="conteiner conteiner_team">
-					<div class="content content_team">
+					<div class="content_team">
 						 
 							<h4 class="title title_team">команда</h4>
 							<div class="accordeon accordeon_team">
 								<ul class="accordeon__list">
 									<li class="accordeon__item">
-										<button type="button" class="accordeon__button"> 
+										<button type="button" class="accordeon__button">
+											<!-- <svg class="polygon__icon">
+						            			<use xlink:href=""></use>
+						        			</svg> -->
 										<span class="title title_crewman-name">дениэл редклиф</span>
 										</button>	
 										<div class="accordeon__crewman">
@@ -179,7 +204,10 @@
 										</div>
 									</li>
 									<li class="accordeon__item"> 
-										<button type="button" class="accordeon__button"> 
+										<button type="button" class="accordeon__button">
+											<!-- <svg class="polygon__icon">
+						            			<use xlink:href=""></use>
+						        			</svg>  -->
 										<span class="title title_crewman-name">ричатд джеймс</span>
 										</button>
 										<div class="accordeon__crewman">
@@ -193,7 +221,10 @@
 										</div>
 									</li>
 									<li class="accordeon__item"> 
-										<button type="button" class="accordeon__button"> 
+										<button type="button" class="accordeon__button">
+											<!-- <svg class="polygon__icon">
+						            			<use xlink:href=""></use>
+						        			</svg>  -->
 										<span class="title title_crewman-name">джейк финн</span>
 										</button>
 										<div class="accordeon__crewman">
@@ -207,7 +238,10 @@
 										</div>
 									</li>
 									<li class="accordeon__item"> 
-										<button type="button" class="accordeon__button"> 
+										<button type="button" class="accordeon__button">
+											<!-- <svg class="polygon__icon">
+						            			<use xlink:href=""></use>
+						        			</svg>  -->
 										<span class="title title_crewman-name">николай иванов</span>
 										</button>
 										<div class="accordeon__crewman">
@@ -233,8 +267,8 @@
 					<h5 class="title title_menu">меню</h5>
 					<div class="accordeon accordeon_menu">
 						<ul class="accordeon__list accordeon__list_menu">
-							<li class="accordeon__item-menu accordeon__item-menu_meet">
-								<button type="button" class="accordeon__button_vertical">
+							<li class="accordeon__item-menu">
+								<button type="button" class="accordeon__button_vertical accordeon__button_vertical_meat">
 									<div class="title title_accordeon-menu">для мясоедов</div>	
 								</button>
 								<div class="accordeon__hidden">
@@ -244,8 +278,8 @@
 									</div>
 								</div>
 							</li>
-							<li class="accordeon__item-menu accordeon__item-menu_veg">
-								<button type="button" class="accordeon__button_vertical">
+							<li class="accordeon__item-menu">
+								<button type="button" class="accordeon__button_vertical accordeon__button_vertical_veg">
 									<span class="title title_accordeon-menu">вегетарианское	</span>
 								</button>
 								<div class="accordeon__hidden">
@@ -255,8 +289,8 @@
 									</div>
 								</div>
 							</li>
-							<li class="accordeon__item-menu accordeon__item-menu_diet">
-								<button type="button" class="accordeon__button_vertical">
+							<li class="accordeon__item-menu">
+								<button type="button" class="accordeon__button_vertical accordeon__button_vertical_diet">
 									<span class="title title_accordeon-menu">диетическое</span>
 								</button>
 								<div class="accordeon__hidden">
@@ -480,7 +514,7 @@
 					</div>
 				</footer>
 			</section>
-	</div>
+	<!-- </div> -->
 	<div class="fixed-menu">
 		<ul class="points">
 		<li class="points__item points__item_active">

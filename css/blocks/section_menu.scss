@@ -26,41 +26,25 @@
 
 .accordeon__item-menu {
 	height: 100%;
-
-	&:hover {
-		.title_accordeon-menu {
-			color: #f8b43a;
-		}
-	}
-	
-	&:hover {
-		.accordeon__hidden {
-			width: 100%;
-			overflow: none;
-		}
-	}	
-	
 }
 
-
-.accordeon__item-menu_meet {
+.accordeon__button_vertical_meat {
 	background: url(../img/accordeon_hunter.jpg) no-repeat;
 	background-size: cover;
 	background-position: center center;
 }
 
-.accordeon__item-menu_veg {
+.accordeon__button_vertical_veg {
 	background: url(../img/accordeon_veg.jpg) no-repeat;
 	background-size: cover;
 	background-position: 60% center;
 }
 
-.accordeon__item-menu_diet {
+.accordeon__button_vertical_diet {
 	background: url(../img/accordeon_diet.jpg) no-repeat;
 	background-size: cover;
 	background-position: 60% center;
 }
-
 
 .accordeon__button_vertical {
 	display: block;
@@ -72,8 +56,21 @@
 	background-color: rgba(47,50,52,.93);
 	position: relative;
 	cursor: pointer;
-}
 
+	
+	&:focus {
+		.title_accordeon-menu {
+			color: #f8b43a;
+		}
+
+		+ .accordeon__hidden {
+			max-width: rem(541px);
+			width: 100%;
+			height: 100%;
+			overflow: none;
+		}
+	}
+}
 
 .title_accordeon-menu {
 	position: absolute;
@@ -92,23 +89,19 @@
 .accordeon__hidden {
 	height: 100%;
 	float: left;
-	background-color: rgba(47,50,52,.93);
 	width: 0;
 	overflow: hidden;
+	background-color: rgba(#2f3234, .93);
 }
 
 .accordeon__text {
-	font-family:Ubuntu;
-	font-weight: 300;
-	font-size: rem(14px);
-	color: #fff;
 	padding: rem(60px) rem(30px);
-	width: 100%;
-  	line-height: 1.8;
-  	display: none;
 }
 
 .accordeon__menu-text {
-	padding: 0;
-	margin: 0;
+	font-family: Ubuntu;
+	font-weight: 300;
+	font-size: rem(14px);
+	color: #fff;
+	line-height: 1.8;
 }

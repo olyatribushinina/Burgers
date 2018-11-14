@@ -1,30 +1,27 @@
 .header {
-  width: 100px;
+  width: 100%;
   position: absolute;
   top: rem(12px);
   display: flex;
+  flex: 1;
   align-items: center;
   z-index: 2;
-
 }
 
 .header__left {
   display: flex;
+  flex: 1;
   justify-content: flex-start;
-  margin: rem(10px) 0 0 0;
-
-   @include tablets() {
-      margin-left: rem(25px);
-      flex: 1;
-      position: relative;
-  }
+  margin-top: rem(10px);
+  margin-left: rem(25px);
 }
 
 .header__right {
   display: flex;
+  flex: 1;
   margin-left: 46px;
   align-items: flex-start;
-  margin-top: rem(28px);
+  margin-top: rem(10px);
   
   @include tablets() {
       display: none;
@@ -33,20 +30,13 @@
 }
 
 .tablets-block {
-  padding-top: rem(20px);
-  padding-left: rem(30px);
+ margin-top: rem(10px);
+ margin-left: rem(30px);
 
 
   @include tablets() {
-      display: flex;
-      position: absolute;
-      left: 34.875rem;
-  }
-
-  @include phones() {
-      display: flex;
-      position: absolute;
-      left: rem(270px);
+    display: flex;
+    margin-right: rem(25px);
   }
 
 }

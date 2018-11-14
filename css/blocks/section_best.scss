@@ -3,7 +3,7 @@
   background-size: cover;
  }
 
-.about__content {
+.content_about {
 	text-align: center;
   	display: flex;
   	flex-direction: column;
@@ -14,87 +14,48 @@
 .title__about {
 	text-align: center;
 	color: #2f3234;
-	padding-top: rem(115px);
-
-	@include phones {
-    	margin: 0;
-		padding-top: rem(80px);	
-  }
+	padding-top: 21%;
 }
 
 .we {
-	width: 100%;
+	max-width: 100%;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	text-align: center;
+	margin-left: -20px;
+	
 	
 	@include phones {
     	flex-direction: column;
-    	padding-top: rem(20px);
+    	// padding-top: rem(20px);
   }
 }
 
 .we__item {
-	width: 33%;
+	width: calc(100% / 3 - 15px);
 	text-align: center;
 	line-height: 1;
-	margin-bottom: rem(50px);
-	padding: 0 rem(15px);
+	margin-left: rem(15px);
 	display: flex;
-	flex: 1;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
   	@include phones {
-  	position: relative;
-    flex-direction: none;
+    flex-direction:row;
     width: auto;
     margin-bottom: 0;
-
-    &:before {
-    	position: absolute;
-   		top: rem(30px);
-    }
-  }
-
-
-	&_meet:before {
-	margin: 0 auto;
-	display: block;
-	content: "";
-	width: rem(100px);
-	height: rem(100px);
-	background: url(../img/meat.png);
-	background-position: center center;
-	background-repeat: no-repeat;
+    text-align: left;
 	}
+ }
 
-
-	&_hand:before {
-	margin: 0 auto;
-	display: block;
-	content: "";
-	width: rem(100px);
-	height: rem(100px);
-	background: url(../img/hand.png);
-	background-position: center center;
-	background-repeat: no-repeat;
-	}
-
-
-	&_natural:before {
-	margin: 0 auto;
-	display: block;
-	content: "";
-	width: rem(100px);
-	height: rem(100px);
-	background: url(../img/natural.png);
-	background-position: center center;
-	background-repeat: no-repeat;
-	}
-
+.best__icon {
+	max-width: 100px;
+	max-height: 100px;
 }
 
 .we__title {
@@ -102,23 +63,11 @@
 	font-weight: 300;
 	font-size: rem(24px);
 	text-transform: none;
-	text-align: auto;
+}
 
+.we__item-desc {
 	@include phones {
-		margin-bottom: 0;
-
-	   &--meat {
-	   	margin-left: rem(12px);
-	   }
-
-	   &--hand {
-	   	margin-left: rem(-30px);
-	   }
-
-	   &--natural {
-	   	margin-left: rem(125px);
-	   }
-	    
+    margin-left: 5%;
 	}
 }
 
@@ -129,10 +78,10 @@
 	color: #828180;
 	line-height: 1.5;
 	user-select: none;
-	text-align: left;
+	text-align: center;
 	padding: 0;
 
 	@include phones {
-    margin-left: rem(130px);
+    text-align: left;
 	}
 }

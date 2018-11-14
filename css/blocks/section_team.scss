@@ -8,42 +8,27 @@
 	position: absolute;
 	top: 0;
 	right: 0;
+	bottom: 0;
 	width: 50%;
 	height: 100vh;
 	background: rgba(0, 0, 0, 0.80);
+	padding: 5% 2% 0 7%;
 
 	@include tablets {
-    left: 0;
+    padding: 0;
     width: 100%;
   }
 }
 
 .content_team {
-	height: 100%;
-	margin-top: 10%;
-	margin-left: auto;
-	padding-left: 30%;
+	text-align: center;
+}
 
+.title_team {
 	@include tablets {
-    text-align: center;
-    margin-left: 0;
-    padding: 0
+    	padding-top: 21%;
   }
-}
-
-.title_accordeon-menu {
-	display: inline-flex;
-	transform: rotate(-90deg);
-	white-space: nowrap;
-}
-
-.accordeon_team {
-	margin-top: rem(40px);
-
-	@include tablets() {
-   			text-align: left;
-   			margin-left: 40%;
-  		}
+	
 }
 
 .accordeon__list {
@@ -52,12 +37,16 @@
 	padding: 0;
 }
 
+.accordeon__item {
+	margin-bottom: rem(40px);
 
-.title_crewman-name {
-	font-size: rem(14px);
-	color: #fff;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.accordeon__button {
 	position: relative;
-
 	&:before {
 		display: block;
 		content: "";
@@ -68,17 +57,18 @@
 		top: 40%;
 		left: rem(-20px);
 	}
+
+}
+
+.title_crewman-name {
+	font-size: rem(14px);
+	color: #fff;
 }
 
 .crewman_position {
 	display: block;
 	font-weight: 700;
 	margin-bottom: rem(10px);
-}
-
-
-.accordeon__item {
-	margin-bottom: rem(30px);
 }
 
 .accordeon__button {
@@ -108,7 +98,6 @@
 	}
 
 }
-
 
 .accordeon__crewman {
 	display: flex;

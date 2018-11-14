@@ -10,58 +10,56 @@
    justify-content: center;
 
    @include tablets() {
-   		display: flex;
-   		flex-direction: column;
-   		align-items: center;
-   		padding: rem(40px) 0 rem(40px) 0;
+   		// display: flex;
+   		// flex-direction: column;
+   		// align-items: center;
+   		// padding: rem(40px) 0 rem(40px) 0;
   	}
 
   	@include phones() {
-   		padding: 0;
+   		// padding: 0;
   	}
  }
 
 .left_slider {
-	margin-top: 5%;
-	position: relative;
+	// margin-top: 5%;
+	// position: relative;
 
 	@include tablets() {
-   		width: 100%;
-   		padding-left: 120px; 
+   		// width: 100%;
+   		// padding-left: 120px; 
   	}
 }
 
 .slider-image {
 	max-width: 100%;
-	max-height: 100%;
 	position: relative;
   	left: 50%;
   	transform: translateX(-50%);
 	object-fit: cover;
 
 	@include tablets() {
-   		left: 32%;
+   		// left: 32%;
   	}
 }
 
 
 .consist-btn {
 	border: transparent;
-	width: rem(90px);
-	height: rem(90px);
+	max-width: rem(90px);
+	max-height: rem(90px);
 	background-color: #f08c33;
 	border-radius: rem(5px);
 	position: relative;
 	cursor: pointer;
 
 	@include tablets() {
-   		width: 90px;
-   		height: 110px;
+   		
   	}
 
 	&:after {
-		width: rem(46px);
-		height: rem(46px);
+		max-width: rem(46px);
+		max-height: rem(46px);
 		display: block;
 		position: absolute;
 		background: url(../img/burger.png) center center no-repeat;
@@ -80,26 +78,20 @@
 
 
 	@include phones() {
-   		right: 70%;
-   		width: rem(90px);
-		height: rem(90px);
+  //  		right: 70%;
+  //  		width: rem(90px);
+		// height: rem(90px);
   	}
 
-}
-
-.consist-btn {
-	@include phones() {
-   		margin-left: rem(20px);
-  	}
 }
 
 .consist-btn__text {
+	display: inline-block;
 	text-transform: uppercase;
 	color: #fff;
 	font-family: Gagalin;
 	font-size: rem(14px);
-	display: inline-block;
-	margin-top: 50px;
+	margin-top: rem(50px);
 }
 
 .popup {
@@ -210,14 +202,14 @@
 	font-size: rem(20px);
 
 	@include tablets() {
-   		position: absolute;
-		right: rem(135px);
-   		top: rem(-15px);
+  //  		position: absolute;
+		// right: rem(135px);
+  //  		top: rem(-15px);
   	}
 
   	@include phones() {
-   		right: rem(20px);
-   		top: rem(-15px);
+   		// right: rem(20px);
+   		// top: rem(-15px);
   	}
 }
 
@@ -236,6 +228,7 @@
 }
 
 .right_slider {
+
 	@include tablets() {
 	   display: flex;
 	   flex-direction: column;
