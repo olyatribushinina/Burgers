@@ -866,26 +866,30 @@ html, body {
   max-width: 450px; }
 
 .accordeon__list {
+  text-align: left;
   list-style: none;
-  margin: 0;
+  margin-left: 20%;
   padding: 0; }
+  @media (max-width: 768px) {
+    .accordeon__list {
+      margin-left: 35%; } }
+  .accordeon__list html {
+    fon-size: 15px; }
+  .accordeon__list .container {
+    max-width: 450px; }
 
 .accordeon__item {
   margin-bottom: 2.5rem; }
   .accordeon__item:last-child {
     margin-bottom: 0; }
 
-.accordeon__button {
-  position: relative; }
-  .accordeon__button:before {
-    display: block;
-    content: "";
-    width: 0.5625rem;
-    height: 0.5625rem;
-    background: url(../img/Polygon_down.png) no-repeat;
-    position: absolute;
-    top: 40%;
-    left: -1.25rem; }
+.polygon__icon {
+  max-width: 0.9375rem;
+  max-height: 0.9375rem;
+  margin-right: 1.25rem;
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg); }
 
 .title_crewman-name {
   font-size: 0.875rem;
@@ -906,23 +910,53 @@ html, body {
   .accordeon__button:focus + .accordeon__crewman {
     height: 100%;
     overflow: none; }
-  .accordeon__button:focus .title_crewman-name:before {
-    -webkit-transform: rotate(-180deg);
-    -ms-transform: rotate(-180deg);
-    transform: rotate(-180deg); }
+  .accordeon__button:focus .polygon__icon {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0); }
 
 .accordeon__crewman {
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 0.9375rem;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   height: 0;
+  margin-top: 1.25rem;
+  margin-left: 1.875rem;
   overflow: hidden; }
+  @media (max-width: 768px) {
+    .accordeon__crewman {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-left: 0; } }
+  .accordeon__crewman html {
+    fon-size: 15px; }
+  .accordeon__crewman .container {
+    max-width: 450px; }
 
-.crewman_pic {
-  margin: 0 1.25rem 0 0; }
+@media (max-width: 768px) {
+  .crewman_pic {
+    text-align: center; } }
+
+.crewman_pic html {
+  fon-size: 15px; }
+
+.crewman_pic .container {
+  max-width: 450px; }
 
 .crewman_photo {
+  max-width: 100%;
   width: 6.25rem;
   height: 6.25rem;
   -o-object-fit: cover;
@@ -930,12 +964,21 @@ html, body {
   border-radius: 50%; }
 
 .about_crewman {
+  text-align: left;
   width: 50%;
   font-family: Ubuntu;
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.5;
   color: #fff; }
+  @media (max-width: 768px) {
+    .about_crewman {
+      margin-left: 0;
+      text-align: center; } }
+  .about_crewman html {
+    fon-size: 15px; }
+  .about_crewman .container {
+    max-width: 450px; }
 
 .clients {
   list-style: none;

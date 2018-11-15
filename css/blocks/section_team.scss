@@ -32,9 +32,14 @@
 }
 
 .accordeon__list {
+	text-align: left;
 	list-style: none;
-	margin: 0;
+	margin-left: 20%;
 	padding: 0;
+
+	@include tablets {
+		margin-left: 35%;
+  }
 }
 
 .accordeon__item {
@@ -45,20 +50,13 @@
 	}
 }
 
-.accordeon__button {
-	position: relative;
-	&:before {
-		display: block;
-		content: "";
-		width: rem(9px);
-		height: rem(9px);
-		background: url(../img/Polygon_down.png) no-repeat;
-		position: absolute;
-		top: 40%;
-		left: rem(-20px);
-	}
-
+.polygon__icon {
+	max-width: rem(15px);
+	max-height: rem(15px);
+	margin-right: rem(20px);
+	transform: rotate(-180deg);
 }
+
 
 .title_crewman-name {
 	font-size: rem(14px);
@@ -88,29 +86,43 @@
 		+.accordeon__crewman {
 			height: 100%;
 			overflow: none;
-			
 		}
 	
 	&:focus {
-		.title_crewman-name:before {
-			transform: rotate(-180deg);
+		.polygon__icon {
+			transform: rotate(0);
 		}
 	}
 
 }
 
 .accordeon__crewman {
+	height: auto;
 	display: flex;
-	padding-top: rem(15px);
+	justify-content: flex-end;
 	height: 0;
+	margin-top: rem(20px);
+	margin-left: rem(30px);
 	overflow: hidden;
+
+	@include tablets {
+    	flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		margin-left: 0;
+  	}
+
 }
 
 .crewman_pic {
-	margin: 0 rem(20px) 0 0;
+
+	@include tablets {
+	    	text-align: center;
+	  	}
 }
 
 .crewman_photo {
+	max-width: 100%;
 	width: rem(100px);
 	height: rem(100px);
 	object-fit: cover;
@@ -118,10 +130,17 @@
 }
 
 .about_crewman {
+	// margin-left: 2%;
+	text-align: left;
 	width: 50%;
 	font-family: Ubuntu;
 	font-weight: 300;
   	font-size: rem(14px);
   	line-height: 1.5;
   	color: #fff;
+
+  	@include tablets {
+    	margin-left: 0;
+		text-align: center;
+  }
 }

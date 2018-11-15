@@ -1,5 +1,13 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px">
 <!-- viewBox="0 0 28.685 14.479" -->
+	<symbol id="polygon">
+		<polygon
+		points="5 10 10,5 15,10"
+		stroke="#f8b43a"
+		fill="#f8b43a"
+		/>				            			
+	</symbol>
+
 	<symbol id="arrow-scroll">
 		<g>
 	<g>
