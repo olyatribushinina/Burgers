@@ -39,7 +39,13 @@
 
 	@include tablets {
 		margin-left: 35%;
-  }
+  	}
+
+	@include phones{
+		margin-left: 30%;
+  	}
+
+
 }
 
 .accordeon__item {
@@ -67,6 +73,12 @@
 	display: block;
 	font-weight: 700;
 	margin-bottom: rem(10px);
+
+	@include tablets {
+    	text-align: center;
+    	margin-top: 2%;
+    	margin-bottom: 0;
+  	}
 }
 
 .accordeon__button {
@@ -99,26 +111,27 @@
 .accordeon__crewman {
 	height: auto;
 	display: flex;
-	justify-content: flex-end;
 	height: 0;
+	width: 100%;
 	margin-top: rem(20px);
-	margin-left: rem(30px);
 	overflow: hidden;
 
 	@include tablets {
     	flex-direction: column;
-		align-items: flex-start;
+		width: 50%;
+		align-items: center;
 		justify-content: center;
-		margin-left: 0;
   	}
 
 }
 
 .crewman_pic {
-
+	margin-left: 7%;
 	@include tablets {
-	    	text-align: center;
-	  	}
+		margin-left: 0;	
+	    display: flex;
+	    justify-content: center;	
+	}
 }
 
 .crewman_photo {
@@ -130,7 +143,10 @@
 }
 
 .about_crewman {
-	// margin-left: 2%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-left: 2%;
 	text-align: left;
 	width: 50%;
 	font-family: Ubuntu;
@@ -140,7 +156,9 @@
   	color: #fff;
 
   	@include tablets {
-    	margin-left: 0;
-		text-align: center;
+  		align-items: center;
+  		text-align: center;
+    	padding-left: 0;
+    	width: 100%;
   }
 }

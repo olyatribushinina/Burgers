@@ -1,13 +1,35 @@
 .section_slider {
-  background: url(../img/bg_orange.png) center center no-repeat;
-  background-size: cover;
+  	background: url(../img/bg_orange.png) center center no-repeat;
+  	background-size: cover;
+  	display: flex;
+ 	align-items: center;
+ 	
  }
 
+ .section_slider-arrow {
+ 	display: block;
+ 	margin: 0 auto;
+ }
+
+.section_slider-icon--prew {
+	transform: rotate(90deg);
+}
+
+.section_slider-arrow--next {
+	transform: rotate(-90deg);
+}
+
+.slider-arrow__icon {
+	width: rem(33px);
+	height: rem(16px);
+}
+
  .content_slider {
-   display: flex;
-   flex: 1;
-   align-items: center;
-   justify-content: center;
+ 	height: 100%;
+  	display: flex;
+   	flex: 1;
+   	align-items: center;
+   	justify-content: center;
 
    @include tablets() {
    		// display: flex;
@@ -22,14 +44,9 @@
  }
 
 .left_slider {
-	// margin-top: 5%;
-	// position: relative;
+	position: relative;
+} 
 
-	@include tablets() {
-   		// width: 100%;
-   		// padding-left: 120px; 
-  	}
-}
 
 .slider-image {
 	max-width: 100%;
@@ -37,29 +54,23 @@
   	left: 50%;
   	transform: translateX(-50%);
 	object-fit: cover;
-
-	@include tablets() {
-   		// left: 32%;
-  	}
 }
 
 
 .consist-btn {
 	border: transparent;
-	max-width: rem(90px);
-	max-height: rem(90px);
+	width: rem(90px);
+	height: rem(90px);
 	background-color: #f08c33;
 	border-radius: rem(5px);
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
 	cursor: pointer;
 
-	@include tablets() {
-   		
-  	}
-
 	&:after {
-		max-width: rem(46px);
-		max-height: rem(46px);
+		width: rem(46px);
+		height: rem(46px);
 		display: block;
 		position: absolute;
 		background: url(../img/burger.png) center center no-repeat;
@@ -75,14 +86,6 @@
 			display: block;
 			z-index: 4;
 		}
-
-
-	@include phones() {
-  //  		right: 70%;
-  //  		width: rem(90px);
-		// height: rem(90px);
-  	}
-
 }
 
 .consist-btn__text {
@@ -194,6 +197,9 @@
 }
 
 .logo-kkal {
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	width: rem(60px);
 	height: rem(90px);
 	background: url(../img/kkal.png) center center no-repeat;
@@ -228,12 +234,13 @@
 }
 
 .right_slider {
+	display: flex;
+	flex-direction: column;
+	// align-items: center;
+	justify-content: center;	
 
 	@include tablets() {
-	   display: flex;
-	   flex-direction: column;
-	   align-items: center;
-	   justify-content: center;			
+	   		
 	}
 
 	@include phones() {

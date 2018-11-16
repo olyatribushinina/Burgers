@@ -14,21 +14,17 @@
 	text-align: center;
 
 	@include tablets() {
-   			// margin-bottom: rem(20px);
-			// margin-top: 15%;
+   			margin-bottom: rem(20px);
+			margin-top: 15%;
   		}
-	
-	// @include phones() {
- //   			text-align: center;
- //  		}
-
 }
 
 .form {
 	padding: 0 5%;
 	width: 100%;
-	height: 100%;
+	min-height: 100%;
 	display: flex;
+	flex: 1;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: top;
@@ -41,7 +37,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    max-width: 100%;
   }
 
   	@include phones {
@@ -61,7 +56,7 @@
 	flex: 1;
 
 	@include tablets {
-	    width: 100%;
+	    min-width: 90%;
 	    margin-right: 0;
 	   
     }
@@ -184,9 +179,6 @@
 		position: absolute;
 		width: rem(11px);
 		height: rem(9px);
-		// top: 50%;
-		// left: 50%;
-		// transform: translate(-50%, -50%);
 		opacity: 0;
 	}
 }

@@ -70,6 +70,10 @@
 			overflow: none;
 		}
 	}
+
+	@include phones {
+			width: rem(50px);
+		}
 }
 
 .title_accordeon-menu {
