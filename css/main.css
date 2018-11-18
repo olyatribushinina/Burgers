@@ -400,6 +400,7 @@ html, body {
   align-items: center;
   margin-left: 14px;
   margin-right: 14px;
+  margin-top: 16px;
   display: none;
   cursor: pointer; }
   .hamburger-menu-btn:focus {

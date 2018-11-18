@@ -8,9 +8,9 @@ $hamburger.on("click", function() {
 	$("body").addClass("blocked-scroll");
 });
 
-// $(.hamburger-menu-btn).on("click", function(e) {
-// 	$(this).addClass("hamburger-menu-btn--active");
-// });
+$(".hamburger-menu-btn").on("click", function(e) {
+	$(this).addClass("hamburger-menu-btn--active");
+});
 
 $closeMenu.on("click", function () {
 	$fixedMenu.fadeOut().removeClass("fixed-menu--open");
