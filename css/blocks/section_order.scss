@@ -14,7 +14,7 @@
 	text-align: center;
 
 	@include tablets() {
-   			margin-bottom: rem(20px);
+   			margin-bottom: 20px;
 			margin-top: 15%;
   		}
 }
@@ -52,7 +52,7 @@
 
 .form__column {
 	max-width: 50%;
-	margin-right: rem(19px);
+	margin-right: 19px;
 	flex: 1;
 
 	@include tablets {
@@ -67,13 +67,13 @@
 }
 
 .form__row {
-	margin-bottom: rem(17px);
+	margin-bottom: 17px;
 	display: flex;
 }
 
 .form__input {
 	flex: 1;
-	margin-right: rem(19px);
+	margin-right: 19px;
 }
 
 .form__input:last-child {
@@ -82,10 +82,10 @@
 
 .form__input-elem {
 	width: 100%;
-	padding: rem(9px) rem(12px);
+	padding: 9px 12px;
 	border: none;
-	border-radius: rem(5px);
-	border: rem(1px) solid transparent;
+	border-radius: 5px;
+	border: 1px solid transparent;
 
 	&:focus {
 		outline: none;
@@ -95,7 +95,7 @@
 
 .form__input-elem_textarea {
 	resize: vertical;
-	height: rem(109px);
+	height: 109px;
 }
 
 .form__buttons {
@@ -112,7 +112,7 @@
 .form__radio {
 	display: inline-flex;
 	vertical-align: middle;
-	margin-right: rem(20px);
+	margin-right: 20px;
 }
 
 .form__radio-real {
@@ -121,26 +121,22 @@
 
 // не идентифицирует "checked"
 
-.form__radio-real:checked ~ .form__radio-visible:after {   
-	opacity: 1;
-}
 
 .form__radio-visible {
-	width: rem(15px);
-	height: rem(15px);
-	border: rem(1px) solid #red;
+	width: 14px;
+	height: 14px;
 	border-radius: 50%;
 	background-image: linear-gradient(to top, #ededed, #fff);
 	position: relative;
-	margin-right: rem(10px);
+	margin-right: 10px;
 
 	&:after {
 		display: block;
 		content: "";
-		width: rem(7px);
-		height: rem(7px);
+		width: 7px;
+		height: 7px;
 		border-radius: 50%;
-		background: #red;
+		background: #e45028;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -149,10 +145,14 @@
 	}
 }
 
+.form__radio-real:checked ~ .form__radio-visible:after {   
+	opacity: 1;
+}
+
 .form__checkbox {
 	display: inline-flex;
 	vertical-align: middle;
-	margin-right: rem(20px);
+	margin-right: 20px;
 }
 
 .form__checkbox-real {
@@ -165,20 +165,20 @@
 }
 
 .form__checkbox-visible {
-	width: rem(15px);
-	height: rem(15px);
+	width: 15px;
+	height: 15px;
 	background: #fff;
 	position: relative;
-	margin-right: rem(10px);
+	margin-right: 10px;
 
 	&:after {
 		display: block;
 		content: "";
 		background: url(../img/checkbox.png) 50% no-repeat transparent;
 		background-size: contain;
-		position: absolute;
-		width: rem(11px);
-		height: rem(9px);
+		position: absolute;  
+		width: 11px;
+		height: 9px;
 		opacity: 0;
 	}
 }
@@ -186,7 +186,7 @@
 .order_form {
 	border: 0;
 	cursor: pointer;
-	margin-right: rem(20px);
+	margin-right: 20px;
 
 
 	&:focus {

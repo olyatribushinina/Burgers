@@ -6,13 +6,13 @@
 	@media (max-width: $tablets) {
 		@content;
 	}
-	html {fon-size: 15px;}
-	.container {max-width: 450px;}
+	
 }
 
 @mixin phones {
 	@media (max-width: $phones) {
 		@content;
 	}
-	html {fon-size: 13px;}
+	
 }
+ 

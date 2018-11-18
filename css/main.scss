@@ -1,25 +1,24 @@
 // normalize
 @import "layout/normalize.scss";
 
-
-// setups
-@import "layout/fonts";
-@import "layout/base";
-
-
-// breakpoints
+// resolutions
 $desktop: 1200px;
 $laptop: 992px;
 $tablets: 768px;
 $phones: 480px;
 
+
 //media
 @import "layout/media";
+
+// setups
+@import "layout/fonts";
+@import "layout/base";
 @import "layout/mixins";
 
 
-// blocks
 
+// blocks
 @import "blocks/humburger-menu-btn.scss";
 @import "blocks/header.scss";
 @import "blocks/btns.scss";

@@ -44,9 +44,10 @@
 								</li>
 							</ul>
 						</nav>
+
 						<aside class="tablets-block">
 						<a href="#order" class="order order_tablets-block">заказать</a> 
-						<button type="button" class="hamburger-menu-btn">
+						<button type="button" class="hamburger-menu-btn js-open-menu js-close-menu">
 							<div class="hamburger-menu-btn__elem"></div>
 						</button>
 						</aside>
@@ -325,6 +326,7 @@
 							<h1 class="clients__title">константин спилберг</h1>
 							<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 							<button type="button" class="btn-learn-more">подробнее</button>
+							<button type="button" class="btn-learn-more btn-learn-more--phone">читать отзыв</button>
 						</div>
 					</li>
 					<li class="clients__item">
@@ -464,9 +466,11 @@
 									
 									<!-- чекбох -->
 									<div class="form__row">
+										<label class="form_checkbox">
 										<input type="checkbox" name="no_recall" class="form__checkbox-real">
 										<input type="checkbox" name="no_recall" class="form__checkbox-visible">
 										<span class="form__checkbox-text">Не перезванивать</span>
+										</label>
 									</div>
 
 									<!-- кнопки -->
@@ -526,7 +530,39 @@
 				</footer>
 			</section>
 	<!-- </div> -->
-	<div class="fixed-menu">
+
+	<div class="fixed-menu js-fixed-menu">
+		<figure class="fixed-menu__logo">
+			<img src="img/logo.png" alt="логотип - Mr Burger" class="logo__pic"> 
+		</figure>
+		<nav class="fixed-menu__nav">
+			<ul class="fixed-menu__navigation">
+				<li class="fixed-menu__item fixed-menu__item--none">
+					<a href="#best" class="fixed-menu__link">о нас</a> 
+				</li>
+				<li class="fixed-menu__item">
+					<a href="#burgers" class="fixed-menu__link">бургеры</a> 
+				</li>
+				<li class="fixed-menu__item">
+					<a href="#team" class="fixed-menu__link">команда</a> 
+				</li>
+				<li class="fixed-menu__item">
+					<a href="#menu" class="fixed-menu__link">меню</a> 
+				</li>
+				<li class="fixed-menu__item">
+					<a href="#reviews" class="fixed-menu__link">отзывы</a> 
+				</li>
+				<li class="fixed-menu__item">
+					<a href="#how-we-work" class="fixed-menu__link">как мы работаем</a> 
+				</li>
+				<li class="fixed-menu__item">
+					<a href="#contacts" class="fixed-menu__link">контакты</a> 
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="fixed-points">
 		<ul class="points">
 		<li class="points__item points__item_active">
 			<a href="#" class="points__link"></a>
@@ -557,6 +593,14 @@
 		</li>
 		</ul>
 	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="scripts/scripts.js"></script>
+	<script>
+		$(function() {
+			alert("jQuery подключен!")
+		})
+	</script>
 	
 </body>
 </html>

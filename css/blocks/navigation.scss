@@ -9,24 +9,24 @@
 }
 
 .navigation__item {
-  margin-left: rem(35px);
+  margin-left: 35px;
   position: relative;
 
   &:before {
     display: block;
     content: "";
-    width: rem(5px);
-    height: rem(5px);
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background-color: #fff;
     position: absolute;
-    top: rem(7px);
-    left: rem(-19px);
+    top: 7px;
+    left: -19px;
   }
 }
 
 .navigation__item_none {
-  margin-left: rem(15px);
+  margin-left: 15px;
 
    &:before {
     display: none;
@@ -38,7 +38,7 @@
   color: #fff;
   font-family: Ubuntu;
   font-weight: 500;
-  font-size: rem(13px);
+  font-size: 13px;
   text-transform: uppercase;
 
   &:hover {

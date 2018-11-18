@@ -1,7 +1,86 @@
+.fixed-menu {
+	position: fixed;
+	display: none;
+	overflow: hidden;
+	background-color: #2f3234;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+.fixed-menu--open {
+	display: flex;
+  	overflow: hidden;
+}
+
+
+.fixed-menu__nav {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;	
+}
+
+.fixed-menu__navigation {
+	list-style: none;
+  	margin: 0;
+ 	padding: 0;
+  	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.fixed-menu__item {
+  	position: relative;
+	margin-bottom: 35px;
+
+	&:before {
+    display: block;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: -80%;
+    left: 49%;
+  }
+}
+
+.fixed-menu__item--none {
+
+   &:before {
+    display: none;
+   }
+}
+
+.fixed-menu__link {
+  text-decoration: none;
+  color: #fff;
+  font-family: Ubuntu;
+  font-weight: 500;
+  font-size: 24px;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.blocked-scroll {
+	overflow: hidden;
+}
+
 .points {
 	position: fixed;
-	top: rem(80px);
-	right: rem(45px);
+	top: 80px;
+	right: 45px;
 	list-style: none;
 
 	@include tablets {
@@ -10,7 +89,7 @@
 }
 
 .points__item {
-	margin-bottom: rem(10px);
+	margin-bottom: 10px;
 }
 
 .points__item--active .points__link {
@@ -19,8 +98,8 @@
 
 .points__link {
 	display: block;
-	width: rem(16px);
-	height: rem(16px);
+	width: 16px;
+	height: 16px;
 	border: 1px solid transparent;
 	border-radius: 50%;
 	position: relative;
@@ -33,8 +112,8 @@
 	&:before {
 	display: block;
 	content: "";
-	width: rem(6px);
-	height: rem(6px);
+	width: 6px;
+	height: 6px;
 	border-radius: 50%;
 	background: #fff;
 	position: absolute;

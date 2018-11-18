@@ -12,6 +12,7 @@
    	align-items: center;
    	justify-content: center;
    	padding-top: 30%;
+
    	@include tablets {
     flex-direction: column;
   }
@@ -32,11 +33,9 @@
   	}
 }
 
-
-
 .right {
 	@include tablets() {
-   		padding-left: rem(10px);
+   		padding-left: 10px;
    		margin-top: 10px;
   	}
 }
@@ -59,7 +58,7 @@
 
 .double-title {
 	display: block;
-	margin-top: rem(200px);
+	margin-top: 200px;
 
 	@include tablets() {
    		margin-top: 0;
@@ -71,9 +70,9 @@
 	display: block;
 	font-family: Lifehack;
 	font-weight: 300;
-	font-size: rem(65px);
+	font-size: 65px;
 	color: #fff;
-	padding-top: rem(20px);
+	padding-top: 20px;
 	line-height: 1.2;
 	text-transform: none;
 }
@@ -82,10 +81,10 @@
 	position: absolute;
 	display: block;
 	text-decoration: none;
-	bottom: rem(20px);
+	bottom: 20px;
 	left: 50%;
-	width: rem(33px);
-	height: rem(14px);
+	width: 33px;
+	height: 14px;
 }
 
 

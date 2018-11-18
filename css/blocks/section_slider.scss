@@ -20,8 +20,8 @@
 }
 
 .slider-arrow__icon {
-	width: rem(33px);
-	height: rem(16px);
+	width: 33px;
+	height: 6px;
 }
 
  .content_slider {
@@ -32,9 +32,8 @@
    	justify-content: center;
 
    @include tablets() {
-   		// display: flex;
-   		// flex-direction: column;
-   		// align-items: center;
+   		flex-direction: column;
+   		align-items: center;
    		// padding: rem(40px) 0 rem(40px) 0;
   	}
 
@@ -45,11 +44,18 @@
 
 .left_slider {
 	position: relative;
+	width: 50%;
+	min-height: rem(475px);
+	height: 50%;
+
+	@include tablets() {
+	   	width: 100%;
+	}
 } 
 
 
 .slider-image {
-	max-width: 100%;
+	min-width: 100%;
 	position: relative;
   	left: 50%;
   	transform: translateX(-50%);
@@ -59,18 +65,18 @@
 
 .consist-btn {
 	border: transparent;
-	width: rem(90px);
-	height: rem(90px);
+	width: 90px;
+	height: 90px;
 	background-color: #f08c33;
-	border-radius: rem(5px);
+	border-radius: 5px;
 	position: absolute;
 	top: 0;
 	left: 0;
 	cursor: pointer;
 
 	&:after {
-		width: rem(46px);
-		height: rem(46px);
+		width: 46px;
+		height: 46px;
 		display: block;
 		position: absolute;
 		background: url(../img/burger.png) center center no-repeat;
@@ -79,6 +85,10 @@
 		top: 40%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+  	}
+
+		@include tablets() {
+	   		// padding: 40px 0 40px 0;
 	}
 
 	&:focus
@@ -93,19 +103,19 @@
 	text-transform: uppercase;
 	color: #fff;
 	font-family: Gagalin;
-	font-size: rem(14px);
-	margin-top: rem(50px);
+	font-size: 14px;
+	margin-top: 50px;
 }
 
 .popup {
-	width: rem(270px);
+	width: 270px;
 	background: #fff;
 	opacity: 0.9;
-	border-radius: rem(5px);
+	border-radius: 5px;
 	position: absolute;
 	top: 0;
-	right: rem(145px);
-	padding: rem(18px);
+	right: 145px;
+	padding: 18px;
 	display: none;
 }
 
@@ -120,7 +130,7 @@
 .popup__item {
 	display: flex;
 	font-family: Ubuntu;
-	font-size: rem(14px);
+	font-size: 14px;
 	align-items: center;
 }
 
@@ -134,18 +144,18 @@
 
 	&_cow:before {
 		display: block;
-		margin-right: rem(25px);
-		width: rem(48px);
-		height: rem(48px);
+		margin-right: 25px;
+		width: 48px;
+		height: 48px;
 		content: "";
 		background: url(../img/cow.png) center center no-repeat;
 	}
 
 	&_buns:before {
 		display: block;
-		margin-right: rem(25px);
-		width: rem(48px);
-		height: rem(48px);
+		margin-right: 25px;
+		width: 48px;
+		height: 48px;
 		content: "";
 		background: url(../img/buns.png) center center no-repeat;
 	}
@@ -153,17 +163,17 @@
 	&_salad:before {
 		display: block;
 		margin-right: rem(25px);
-		width: rem(48px);
-		height: rem(48px);
+		width: 48px;
+		height: 48px;
 		content: "";
 		background: url(../img/salad.png) center center no-repeat;
 	}
 
 	&_sauce:before {
 		display: block;
-		margin-right: rem(25px);
-		width: rem(48px);
-		height: rem(48px);
+		margin-right: 25px;
+		width: 48px;
+		height: 48px;
 		content: "";
 		background: url(../img/sauce.png) center center no-repeat;
 	}
@@ -171,17 +181,17 @@
 	&_cucumber:before {
 		display: block;
 		margin-right: rem(25px);
-		width: rem(48px);
-		height: rem(48px);
+		width: 48px;
+		height: 48px;
 		content: "";
 		background: url(../img/cucumber.png) center center no-repeat;
 	}
 
 	&_cheese:before {
 		display: block;
-		margin-right: rem(25px);
-		width: rem(48px);
-		height: rem(48px);
+		margin-right: 25px;
+		width: 48px;
+		height: 48px;
 		content: "";
 		background: url(../img/cheese.png) center center no-repeat;
 	}
@@ -200,22 +210,16 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	width: rem(60px);
-	height: rem(90px);
+	width: 60px;
+	height: 90px;
 	background: url(../img/kkal.png) center center no-repeat;
 	color: #fff;
 	font-family: Gagalin;
-	font-size: rem(20px);
+	font-size: 20px;
 
 	@include tablets() {
-  //  		position: absolute;
-		// right: rem(135px);
-  //  		top: rem(-15px);
-  	}
-
-  	@include phones() {
-   		// right: rem(20px);
-   		// top: rem(-15px);
+		top: 0;
+		right: 0; 		
   	}
 }
 
@@ -223,30 +227,27 @@
 	opacity: 0.7;
 	text-align:center;
 	display: block;
-	padding-top: rem(41px);
+	padding-top: 41px;
 	line-height: 1.5;
 }
 
 
 .weight {
 	display: block;
-	margin-top: rem(10px);
+	margin-top: 10px;
 }
 
 .right_slider {
+	width: 50%;
+	height: 50%;
 	display: flex;
 	flex-direction: column;
-	// align-items: center;
 	justify-content: center;	
 
 	@include tablets() {
-	   		
+	   	width: 100%;
+	   	text-align: center;	
 	}
-
-	@include phones() {
-   			width: 100%;
-  		}
-
 }
 
 .title_slider-white {
@@ -254,7 +255,7 @@
 	margin: 0;
 
 	@include tablets() {
-   			text-align: center;
+   			// text-align: center;
   		}
 }
 
@@ -266,7 +267,7 @@
 	line-height: 2;
 
 	@include phones() {
-   		text-align: center;
+   		// text-align: center;
   	}
 }
 

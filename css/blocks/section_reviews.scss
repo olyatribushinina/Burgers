@@ -37,8 +37,15 @@
 	opacity: 0;
 	transition: opacity .5s;
 	line-height: 0;
-	padding-left: rem(20px);
-	padding-top: rem(40px);
+	padding-left: 20p;
+	padding-top: 40px;
+
+	@include tablets {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }	
 }
 
 .clients__title {
@@ -46,6 +53,11 @@
 	font-weight: 300;
 	font-size: rem(14px);
 	color: #fff;
+
+	@include phones {
+	    font-size: rem(24px);
+	    font-weight: 500;
+  }	
 }
 
 .clients__photo {
@@ -65,4 +77,8 @@
 	font-size: rem(14px);
 	color: #fff;
 	line-height: 2;
+
+	@include phones {
+    display: none;
+  }	
 }
