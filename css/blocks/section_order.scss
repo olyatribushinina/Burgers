@@ -17,12 +17,15 @@
    			margin-bottom: 20px;
 			margin-top: 15%;
   		}
+
+  	@include phones() {
+		   	margin-top: 0;
+		}
 }
 
 .form {
 	padding: 0 5%;
 	width: 100%;
-	min-height: 100%;
 	display: flex;
 	flex: 1;
 	flex-wrap: wrap;
@@ -37,16 +40,18 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
   }
 
   	@include phones {
     padding: 0;
+    max-height: 100%;
 	}
 }
 
 .form__input-title {
 	display: inline-flex;
-	margin-bottom: rem(10px);
+	margin-bottom: 10px;
 	text-transform: none;
 }
 

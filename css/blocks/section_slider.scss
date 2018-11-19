@@ -1,77 +1,96 @@
 .section_slider {
-  	background: url(../img/bg_orange.png) center center no-repeat;
-  	background-size: cover;
+	background: rgb(240,140,51);
+	background: -moz-linear-gradient(45deg, rgba(240,140,51,1) 0%, rgba(248,180,58,1) 100%);
+	background: -webkit-linear-gradient(45deg, rgba(240,140,51,1) 0%,rgba(248,180,58,1) 100%);
+	background: linear-gradient(45deg, rgba(240,140,51,1) 0%,rgba(248,180,58,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f08c33', endColorstr='#f8b43a',GradientType=1 );
+	
+	min-height: 100%;
   	display: flex;
  	align-items: center;
- 	
  }
 
  .section_slider-arrow {
- 	display: block;
- 	margin: 0 auto;
+ 	width: 100%;
+ 	height: 100%;
  }
 
-.section_slider-icon--prew {
+.section_slider__link {
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ }
+
+.section_slider__link--prew {
 	transform: rotate(90deg);
 }
 
-.section_slider-arrow--next {
+.section_slider__link--next {
 	transform: rotate(-90deg);
 }
 
 .slider-arrow__icon {
 	width: 33px;
-	height: 6px;
+	height: 33px;
 }
 
  .content_slider {
- 	height: 100%;
   	display: flex;
    	flex: 1;
    	align-items: center;
    	justify-content: center;
+   	height: 100vh;
+	
 
    @include tablets() {
    		flex-direction: column;
-   		align-items: center;
-   		// padding: rem(40px) 0 rem(40px) 0;
   	}
 
   	@include phones() {
-   		// padding: 0;
-  	}
+		  margin: 2%;
+		}
  }
 
 .left_slider {
 	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
 	width: 50%;
-	min-height: rem(475px);
-	height: 50%;
+	height: 100%;
+	height: 475px;
 
 	@include tablets() {
 	   	width: 100%;
+	   	height: 50%;
 	}
+
+	&-img {
+		width: 100%;
+	}
+	
+	@include tablets() {
+	   	padding: 20% 10%;
+	   
+	}	
 } 
 
-
 .slider-image {
-	min-width: 100%;
-	position: relative;
-  	left: 50%;
-  	transform: translateX(-50%);
-	object-fit: cover;
+	max-width: 100%;
+	// object-fit: contain;
 }
 
 
 .consist-btn {
-	border: transparent;
-	width: 90px;
-	height: 90px;
-	background-color: #f08c33;
-	border-radius: 5px;
 	position: absolute;
 	top: 0;
 	left: 0;
+	border: transparent;
+	max-width: 90px;
+	max-height: 90px;
+	background-color: #f08c33;
+	border-radius: 5px;
 	cursor: pointer;
 
 	&:after {
@@ -86,10 +105,6 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
   	}
-
-		@include tablets() {
-	   		// padding: 40px 0 40px 0;
-	}
 
 	&:focus
 		~.popup {
@@ -117,6 +132,10 @@
 	right: 145px;
 	padding: 18px;
 	display: none;
+
+	@include tablets() {
+	   	right: 315px;
+	}
 }
 
 .popup__list {
@@ -125,6 +144,7 @@
 	padding: 0;
 	height: 100%;
 	width: 100%;
+	user-select: none;
 }
 
 .popup__item {
@@ -195,10 +215,10 @@
 		content: "";
 		background: url(../img/cheese.png) center center no-repeat;
 	}
-
 }
 
 .popup__weight {
+	text-align: center;
 	width: 30%;
 	display: flex;
 	align-items: center;
@@ -216,21 +236,30 @@
 	color: #fff;
 	font-family: Gagalin;
 	font-size: 20px;
+	user-select: none;
 
 	@include tablets() {
-		top: 0;
-		right: 0; 		
+		bottom: 82%;
+		left: 91%; 		
   	}
 }
 
-.kkal {
-	opacity: 0.7;
-	text-align:center;
+.logo-kkal__item {
 	display: block;
-	padding-top: 41px;
+	position: relative;
+	opacity: 0.7;
+	text-align: center;
+	display: block;
 	line-height: 1.5;
 }
 
+.logo-kkal__item--sum {
+	top: 40px;
+}
+
+.logo-kkal__item--name {
+	top: 38px ;
+}
 
 .weight {
 	display: block;
@@ -238,6 +267,8 @@
 }
 
 .right_slider {
+	padding-left: 0;
+   	margin-top: 0;
 	width: 50%;
 	height: 50%;
 	display: flex;
@@ -245,6 +276,7 @@
 	justify-content: center;	
 
 	@include tablets() {
+		height: auto;
 	   	width: 100%;
 	   	text-align: center;	
 	}
@@ -253,10 +285,6 @@
 .title_slider-white {
 	color: #fff;
 	margin: 0;
-
-	@include tablets() {
-   			// text-align: center;
-  		}
 }
 
 .slider-desc {
@@ -265,10 +293,6 @@
 	font-size: rem(14px);
 	font-weight: 300;
 	line-height: 2;
-
-	@include phones() {
-   		// text-align: center;
-  	}
 }
 
 .title_slider-red {

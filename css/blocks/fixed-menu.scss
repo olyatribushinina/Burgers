@@ -7,11 +7,13 @@
 	height: 100vh;
 	top: 0;
 	left: 0;
+	bottom: 0;
 	z-index: 1000;
 }
 
 .fixed-menu--open {
 	display: flex;
+	flex-direction: column;
   	overflow: hidden;
 }
 
@@ -22,14 +24,14 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;	
+	justify-content: center;
+	
 }
 
 .fixed-menu__navigation {
 	list-style: none;
   	margin: 0;
  	padding: 0;
-  	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -46,7 +48,7 @@
     height: 5px;
     border-radius: 50%;
     background-color: #fff;
-    position: absolute;
+    position:absolute;
     top: -80%;
     left: 49%;
   }

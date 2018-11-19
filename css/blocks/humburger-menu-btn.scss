@@ -1,12 +1,14 @@
-.hamburger-menu-btn {
+.js-open-menu {
+    width: 24px;
+    height: 24px;
     vertical-align: middle;
     position: relative;
     background: transparent;
     border: none; 
     align-items: center;
     margin-left: 14px;
-    margin-right: 14px;
-    margin-top: 16px;
+    margin-right: 7px;
+    margin-top: 7px;
     display: none;
     cursor: pointer;
 
@@ -21,9 +23,10 @@
  }
 
 
- .hamburger-menu-btn__elem {
+ .js-open-menu__elem {
   &, &:before, &:after {
     display: block;
+    content: "";
     background: #fff;
     position: absolute;
     width: 24px;
@@ -32,10 +35,8 @@
   }
 
      &:before, &:after {
-      
       content: "";
       display: block;
-      transition: 0.2s;
     } 
 
     &:before {
@@ -47,14 +48,19 @@
     }
 }
 
-.hamburger-menu-btn--active {
+.js-open-menu--active {
   height: 0;
 }
 
-.hamburger-menu-btn--active:before {
-  transform: rotate(45deg);
+.js-open-menu--active .js-open-menu__elem:before {
+    display: block;
+    content:"";
+    transform: rotate(45deg);
 }
 
-.hamburger-menu-btn--active:after {
-  transform: rotate(-45deg);
+.js-open-menu--active .js-open-menu__elem:after {
+    display: block;
+    content:"";
+    transform: rotate(-45deg);
 }
+

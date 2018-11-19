@@ -47,8 +47,8 @@
 
 						<aside class="tablets-block">
 						<a href="#order" class="order order_tablets-block">заказать</a> 
-						<button type="button" class="hamburger-menu-btn js-open-menu js-close-menu">
-							<div class="hamburger-menu-btn__elem"></div>
+						<button type="button" class="js-open-menu">
+							<div class="js-open-menu__elem"></div>
 						</button>
 						</aside>
 					</header>
@@ -123,11 +123,13 @@
 
 			<!-- Слайдер -->
 			<section class="section section_slider" id="burgers">
-				<a class="section_slider-icon--prew">
-					<svg class="slider-arrow__icon">
-	            		<use xlink:href="sprite/sprite.svg#arrow-scroll"></use>
-	        		</svg>
-				</a>
+				<div class="section_slider__arrow">
+					<a class="section_slider__link section_slider__link--prew">
+						<svg class="slider-arrow__icon">
+		            		<use xlink:href="sprite/sprite.svg#arrow-scroll"></use>
+		        		</svg>
+					</a>
+				</div>
 				<div class="container">
 					<div class="content content_slider">
 						<div class="left left_slider">
@@ -166,7 +168,8 @@
 									<img src="img/burger_vs_cuttlefish_ink.png" alt="бургер с чернилами каракатицы" class="slider-image">
 								</div>	
 							<div class="logo-kkal">
-								<span class="kkal"> 1200 ккал</span>
+								<span class="logo-kkal__item logo-kkal__item--sum">1200</span>
+								<span class="logo-kkal__item logo-kkal__item--name">ккал</span>
 							</div>
 						</div>
 						<div class="right right_slider">
@@ -184,11 +187,13 @@
 						</div>
 					</div>
 				</div>
-				<a class="section_slider-arrow--next">
-					<svg class="slider-arrow__icon">
-	            		<use xlink:href="sprite/sprite.svg#arrow-scroll"></use>
-	        		</svg>
-				</a>
+				<div class="section_slider__arrow">
+					<a class="section_slider__link section_slider__link--next">
+						<svg class="slider-arrow__icon">
+		            		<use xlink:href="sprite/sprite.svg#arrow-scroll"></use>
+		        		</svg>
+					</a>
+				</div>
 			</section>
 
 			<!-- Команда -->
@@ -335,6 +340,7 @@
 							<h1 class="clients__title">константин спилберг</h1>
 							<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 							<button type="button" class="btn-learn-more">подробнее</button>
+							<button type="button" class="btn-learn-more btn-learn-more--phone">читать отзыв</button>
 						</div>
 					</li>
 					<li class="clients__item">
@@ -343,6 +349,7 @@
 							<h1 class="clients__title">константин спилберг</h1>
 							<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 							<button type="button" class="btn-learn-more">подробнее</button>
+							<button type="button" class="btn-learn-more btn-learn-more--phone">читать отзыв</button>
 						</div>
 					</li>
 					<li class="clients__item">
@@ -351,6 +358,7 @@
 							<h1 class="clients__title">константин спилберг</h1>
 							<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 							<button type="button" class="btn-learn-more">подробнее</button>
+							<button type="button" class="btn-learn-more btn-learn-more--phone">читать отзыв</button>
 						</div>
 					</li>
 					<li class="clients__item">
@@ -359,6 +367,7 @@
 							<h1 class="clients__title">константин спилберг</h1>
 							<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 							<button type="button" class="btn-learn-more">подробнее</button>
+							<button type="button" class="btn-learn-more btn-learn-more--phone">читать отзыв</button>
 						</div>
 					</li>
 					<li class="clients__item">
@@ -367,6 +376,7 @@
 							<h1 class="clients__title">константин спилберг</h1>
 							<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 							<button type="button" class="btn-learn-more">подробнее</button>
+							<button type="button" class="btn-learn-more btn-learn-more--phone">читать отзыв</button>
 						</div>
 					</li>
 					<li class="clients__item">
@@ -375,6 +385,7 @@
 							<h1 class="clients__title">константин спилберг</h1>
 							<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 							<button type="button" class="btn-learn-more">подробнее</button>
+							<button type="button" class="btn-learn-more btn-learn-more--phone">читать отзыв</button>
 						</div>
 					</li>
 					<li class="clients__item">
@@ -383,6 +394,7 @@
 							<h1 class="clients__title">константин спилберг</h1>
 							<p class="clients__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 							<button type="button" class="btn-learn-more">подробнее</button>
+							<button type="button" class="btn-learn-more btn-learn-more--phone">читать отзыв</button>
 						</div>
 					</li>
 				</ul>
@@ -531,7 +543,7 @@
 			</section>
 	<!-- </div> -->
 
-	<div class="fixed-menu js-fixed-menu">
+	<div class="fixed-menu">
 		<figure class="fixed-menu__logo">
 			<img src="img/logo.png" alt="логотип - Mr Burger" class="logo__pic"> 
 		</figure>
@@ -596,6 +608,7 @@
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"defer></script>
 	<script src="scripts/scripts.js"defer></script>
+	
 	
 </body>
 </html>
