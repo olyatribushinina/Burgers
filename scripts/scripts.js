@@ -1,13 +1,13 @@
 const $hamburger = $(".js-open-menu");
+const $fixedMenu = $(".js-fixed-menu")
 
-
-$hamburger.on("click", function(e) {
-	$(this).toggleClass(".js-open-menu--active");
-	if ($hamburger.hasClass(".js-open-menu--active")) {
-		$hamburger.fadeIn().addClass("fixed-menu--open");
+$hamburger.on("click", function() {
+	$(this).toggleClass("js-open-menu--active");
+	if ($hamburger.hasClass("js-open-menu--active")) {
+		$fixedMenu.fadeIn().addClass("fixed-menu--open");
 		$("body").addClass("blocked-scroll");
 	}else {
-		$hamburger.fadeOut().removeClass.addClass("fixed-menu--open"); 
+		$fixedMenu.fadeOut().removeClass("js-fixed-menu--open"); 
 		$("body").removeClass("blocked-scroll");
 	}
 });

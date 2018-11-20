@@ -399,7 +399,6 @@ html, body {
   width: 24px;
   height: 24px;
   vertical-align: middle;
-  position: relative;
   background: transparent;
   border: none;
   -webkit-box-align: center;
@@ -409,7 +408,11 @@ html, body {
   margin-right: 7px;
   margin-top: 7px;
   display: none;
-  cursor: pointer; }
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3; }
   .js-open-menu:focus {
     outline: none; }
   @media (max-width: 768px) {
@@ -429,7 +432,10 @@ html, body {
 
 .js-open-menu__elem:before, .js-open-menu__elem:after {
   content: "";
-  display: block; }
+  display: block;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
 
 .js-open-menu__elem:before {
   -webkit-transform: translateY(10px);
@@ -441,19 +447,15 @@ html, body {
   -ms-transform: translateY(-10px);
   transform: translateY(-10px); }
 
-.js-open-menu--active {
+.js-open-menu--active .js-open-menu__elem {
   height: 0; }
 
 .js-open-menu--active .js-open-menu__elem:before {
-  display: block;
-  content: "";
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
 
 .js-open-menu--active .js-open-menu__elem:after {
-  display: block;
-  content: "";
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg); }
@@ -470,8 +472,7 @@ html, body {
   flex: 1;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  z-index: 2; }
+  align-items: center; }
 
 .header__left {
   display: -webkit-box;
@@ -483,8 +484,7 @@ html, body {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 10px;
-  margin-left: 25px; }
+  margin: 0 0 0 25px; }
 
 .header__right {
   display: -webkit-box;
@@ -493,18 +493,18 @@ html, body {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  margin-left: 46px;
+  margin-left: 57px;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
-  margin-top: 10px; }
+  align-items: flex-start; }
   @media (max-width: 768px) {
     .header__right {
       display: none; } }
 
 .tablets-block {
-  margin-top: 10px;
-  margin-left: 30px; }
+  width: 21%;
+  margin-left: 15px;
+  position: relative; }
   @media (max-width: 768px) {
     .tablets-block {
       display: -webkit-box;
@@ -599,7 +599,7 @@ html, body {
   .navigation__link:hover {
     text-decoration: underline; }
 
-.fixed-menu {
+.js-fixed-menu {
   position: fixed;
   display: none;
   overflow: hidden;
@@ -609,9 +609,10 @@ html, body {
   top: 0;
   left: 0;
   bottom: 0;
-  z-index: 1000; }
+  right: 0;
+  z-index: 2; }
 
-.fixed-menu--open {
+.js-fixed-menu--open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -740,9 +741,7 @@ html, body {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  padding-top: 15%;
-  padding-bottom: 15%; }
+  justify-content: center; }
   @media (max-width: 768px) {
     .content_welcome {
       -webkit-box-orient: vertical;
@@ -752,7 +751,7 @@ html, body {
 
 .left,
 .right {
-  width: 50%;
+  width: 45%;
   height: 100%; }
   @media (max-width: 768px) {
     .left,
@@ -776,20 +775,10 @@ html, body {
       flex-wrap: nowrap;
       width: auto; } }
 
-@media (max-width: 768px) {
-  .right {
-    padding-left: 10px;
-    margin-top: 10px; } }
-
 .welcome-image {
   max-width: 100%;
   height: 100%;
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  padding-top: 30px;
+  padding-top: 75px;
   -o-object-fit: contain;
   object-fit: contain;
   -webkit-box-flex: 1;
@@ -807,7 +796,8 @@ html, body {
 
 .double-title {
   display: block;
-  margin-top: 200px; }
+  padding-top: 150px;
+  margin-left: 40px; }
   @media (max-width: 768px) {
     .double-title {
       margin-top: 5%;
@@ -819,8 +809,8 @@ html, body {
   font-weight: 300;
   font-size: 65px;
   color: #fff;
-  padding-top: 20px;
-  line-height: 1.2;
+  padding-top: 15px;
+  line-height: 1;
   text-transform: none; }
   @media (max-width: 480px) {
     .welcome-title {
@@ -830,7 +820,7 @@ html, body {
   position: absolute;
   display: block;
   text-decoration: none;
-  bottom: 20px;
+  bottom: 40px;
   left: 50%;
   width: 33px;
   height: 14px; }

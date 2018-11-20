@@ -2,7 +2,6 @@
     width: 24px;
     height: 24px;
     vertical-align: middle;
-    position: relative;
     background: transparent;
     border: none; 
     align-items: center;
@@ -11,14 +10,19 @@
     margin-top: 7px;
     display: none;
     cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
 
-   
+
     &:focus {
       outline: none;
     }
 
     @include tablets() {
       display: flex;
+      
     }
  }
 
@@ -37,6 +41,7 @@
      &:before, &:after {
       content: "";
       display: block;
+      transition: 0.2s;
     } 
 
     &:before {
@@ -46,21 +51,18 @@
     &:after {
       transform: translateY(-10px);
     }
+
 }
 
-.js-open-menu--active {
-  height: 0;
+.js-open-menu--active .js-open-menu__elem {
+    height: 0;
 }
 
 .js-open-menu--active .js-open-menu__elem:before {
-    display: block;
-    content:"";
     transform: rotate(45deg);
 }
 
 .js-open-menu--active .js-open-menu__elem:after {
-    display: block;
-    content:"";
     transform: rotate(-45deg);
 }
 
