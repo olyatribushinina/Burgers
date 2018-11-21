@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
   	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Burgers</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" defer></script>
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -133,7 +134,9 @@
 				<div class="container">
 					<div class="content content_slider">
 						<div class="left left_slider">
-								<button class="consist-btn">
+								
+								<div class="left_slider-img">
+									<button class="consist-btn">
 									<span class="consist-btn__text">состав</span>
 								</button>
 								<div class="popup">
@@ -164,13 +167,13 @@
 										</li>
 									</ul>
 								</div>
-								<div class="left_slider-img">
 									<img src="img/burger_vs_cuttlefish_ink.png" alt="бургер с чернилами каракатицы" class="slider-image">
-								</div>	
-							<div class="logo-kkal">
+									<div class="logo-kkal">
 								<span class="logo-kkal__item logo-kkal__item--sum">1200</span>
 								<span class="logo-kkal__item logo-kkal__item--name">ккал</span>
 							</div>
+								</div>	
+							
 						</div>
 						<div class="right right_slider">
 							<h4 class="title title_slider-white">dark beef burger</h4>
@@ -280,7 +283,7 @@
 
 			<!-- Меню -->
 			<section class="section section_menu" id="menu">
-				<main class="content content_menu">
+				<div class="content content_menu">
 					<h5 class="title title_menu">меню</h5>
 					<div class="accordeon accordeon_menu">
 						<ul class="accordeon__list accordeon__list_menu">
@@ -319,7 +322,7 @@
 							</li>
 						</ul>
 					</div>
-				</main>
+				</div>
 			</section>
 
 			<!-- Отзывы -->
@@ -541,7 +544,6 @@
 					</div>
 				</footer>
 			</section>
-	<!-- </div> -->
 	
 	<div class="js-fixed-menu">
 		<figure class="fixed-menu__logo">
@@ -606,7 +608,7 @@
 		</ul>
 	</div>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" defer></script>
+	
 	<script src="scripts/scripts.js" defer></script>
 	
 	

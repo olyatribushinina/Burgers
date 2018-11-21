@@ -9,6 +9,13 @@
  }
 
  .title_how-work {
+ 	text-align: center;	
 	color: #2f3234;
-	margin-top: 21%;
+	margin-top: 7%;
+	font-size: 60px;
+
+	@include tablets {
+	    font-size: rem(80px);
+  }	
+
 }

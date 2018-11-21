@@ -43,9 +43,11 @@
 
 .btn-learn-more--phone {
 	display: none;
+	width: 60%;
 
 	@include phones {
-	   display: block;                   
+	   display: block;
+	   white-space: no-wrap;                   
 	}	
 
 

@@ -5,6 +5,10 @@
   display: flex;
   flex: 1;
   align-items: center;
+
+   @include tablets() {
+     top: 9px;
+  }
 }
 
 .header__left {
@@ -26,13 +30,11 @@
 }
 
 .tablets-block {
-width: 21%;
 margin-left: 15px;
-position: relative;
 
   @include tablets() {
     display: flex;
-    margin-right: 25px;
+    margin-left: 0;
   }
 
  @include phones() {
