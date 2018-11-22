@@ -1024,6 +1024,20 @@ html, body {
     .accordeon__item {
       text-align: center; } }
 
+.active-js .polygon__icon {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0); }
+
+.active-js .title_crewman-name {
+  color: #f8b43a; }
+
+.active-js .accordeon__crewman {
+  height: 175px; }
+
 .polygon__icon {
   max-width: 15px;
   max-height: 15px;
@@ -1055,25 +1069,15 @@ html, body {
   outline: none;
   background: transparent;
   cursor: pointer; }
-  .accordeon__button:focus .title_crewman-name {
-    color: #f8b43a; }
-  .accordeon__button:focus + .accordeon__crewman {
-    height: 100%;
-    overflow: none; }
-  .accordeon__button:focus .polygon__icon {
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    -webkit-transform: rotate(0);
-    -ms-transform: rotate(0);
-    transform: rotate(0); }
 
 .accordeon__crewman {
-  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   width: 100%;
   margin-top: 20px;
   overflow: hidden; }
@@ -1813,6 +1817,12 @@ html, body {
   height: 100vh;
   background: rgba(47, 50, 52, 0.93); }
 
+.active-js .title_accordeon-menu {
+  color: #f8b43a; }
+
+.active-js .accordeon__hidden {
+  width: 541px; }
+
 .accordeon__button_vertical {
   display: block;
   border: none;
@@ -1821,13 +1831,6 @@ html, body {
   float: left;
   position: relative;
   cursor: pointer; }
-  .accordeon__button_vertical:focus .title_accordeon-menu {
-    color: #f8b43a; }
-  .accordeon__button_vertical:focus + .accordeon__hidden {
-    max-width: 541px;
-    width: 100%;
-    height: 100%;
-    overflow: none; }
   @media (max-width: 480px) {
     .accordeon__button_vertical {
       width: 60px; } }

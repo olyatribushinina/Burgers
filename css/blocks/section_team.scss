@@ -69,6 +69,22 @@
 	}
 }
 
+
+.active-js {
+	.polygon__icon {
+		transition: 0.3s;
+		transform: rotate(0);
+	}
+
+	.title_crewman-name {
+	color: #f8b43a;
+	}
+
+	.accordeon__crewman {
+		height: 175px;
+	}
+}
+
 .polygon__icon {
 	max-width: 15px;
 	max-height: 15px;
@@ -104,33 +120,12 @@
 	outline: none;
 	background: transparent;
 	cursor: pointer;
-
-	&:focus {
-		.title_crewman-name {
-		color: #f8b43a;
-		} 
-	}
-	
-
-	&:focus 
-		+.accordeon__crewman {
-			height: 100%;
-			overflow: none;
-		}
-	
-	&:focus {
-		.polygon__icon {
-			transition: 0.5s;
-			transform: rotate(0);
-		}
-	}
-
 }
 
 .accordeon__crewman {
-	height: auto;
 	display: flex;
 	height: 0;
+	transition: 0.3s;
 	width: 100%;
 	margin-top: 20px;
 	overflow: hidden;
@@ -141,7 +136,6 @@
 		align-items: center;
 		justify-content: center;
   	}
-
 }
 
 .crewman_pic {

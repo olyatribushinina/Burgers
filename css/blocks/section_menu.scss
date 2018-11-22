@@ -28,6 +28,16 @@
 	background: rgba(#2f3234, .93);
 }
 
+.active-js {
+		.title_accordeon-menu {
+			color: #f8b43a;
+		}
+
+		.accordeon__hidden {
+			width: 541px;
+		}
+	}
+
 
 .accordeon__button_vertical {
 	display: block;
@@ -37,21 +47,7 @@
 	float: left;
 	position: relative;
 	cursor: pointer;
-
 	
-	&:focus {
-		.title_accordeon-menu {
-			color: #f8b43a;
-		}
-
-		+ .accordeon__hidden {
-			max-width: 541px;
-			width: 100%;
-			height: 100%;
-			overflow: none;
-		}
-	}
-
 	@include phones() {
 		   width: 60px;
 		}
