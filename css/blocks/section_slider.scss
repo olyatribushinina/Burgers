@@ -10,94 +10,124 @@
  	align-items: center;
  }
 
- .section_slider-arrow {
- 	width: 100%;
- 	height: 100%;
- }
-
-.section_slider__link {
+ .container_slider {
  	display: flex;
- 	align-items: center;
- 	justify-content: center;
+ 	position: relative;
  }
 
-.section_slider__link--prew {
+ .prev { 
+ 	position: absolute;
+ 	display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left:0;
+    margin-right: 50px;
+ }
+
+ .next {
+ 	position: absolute;	
+ 	display: flex;
+    justify-content: space-between;
+    top: 50%;
+    right: 0;
+    margin-left: 50px;
+ }
+
+ .prev__link, .next__link {
+ 	text-decoration: none;
+ }
+
+ .prev__icon {
+ 	width: 33px;
+ 	height: 33px;
 	transform: rotate(90deg);
-}
-
-.section_slider__link--next {
-	transform: rotate(-90deg);
-}
-
-.slider-arrow__icon {
-	width: 33px;
-	height: 33px;
-}
-
- .content_slider {
-  	display: flex;
-   	flex: 1;
-   	align-items: center;
-   	justify-content: center;
-   	height: 100vh;
-	
-
-   @include tablets() {
-   		flex-direction: column;
-  	}
-
-	@include phones {
-   		margin-top: 50px; 
-  	}
  }
 
-.left_slider {
+ .next__icon {
+ 	width: 33px;
+ 	height: 33px;
+	transform: rotate(-90deg);
+ }
+
+ .sl {
+ 	height: 100%;
+ 	width: 100%;
+ 	position: relative;
+ 	top: 0;
+ 	left: 0;
+ 	right: 0;
+ 	// display: flex;
+ 	flex: 1;
+ 	// justify-content: center;
+ 	list-style: none;
+ 	// margin: 0 50px;
+ 	padding: 0;
+
+ }
+
+ .slide {
+ 	max-width: 900px;
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	display: none;
+	height: 500px;
+
+	@include tablets {
+		max-width: 500px;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+    }
+
+    @include tablets {
+		max-width: 300px;
+    }
+ }
+
+ .showed-js {
+ 	display: flex;
+ }
+
+ .sl__img {
+ 	max-width: 100%;
+ 	flex: 1;	
+ }
+
+ .sl__pic {
+ 	width: 100%;
+ 	margin-top: rem(80px);
+
+	@include tablets {
+       max-width: 80%;
+    }
+ }
+
+ .sl__desc {
+ 	max-width: 410px;
 	display: flex;
-	flex-wrap: nowrap;
-	align-items: center;
+	flex: 1;
+	flex-direction: column;
 	justify-content: center;
-	min-width: 45%;
-	
-
-	@include tablets() {
-	   height: auto;
-	}
-} 
-
-.left_slider-img {
-	position: relative;
-	height: 50%;
-	width: 100%;
-	right: 20px;
-
-	@include tablets() {
-		// top: 15px;
-	   	right: 0;
-	}
-}
-
-.slider-image {
-	min-width: 100%;
-
-	@include phones {
-   max-width: 100%;
-  }
-}
+ }
 
 .consist-btn {
 	position: absolute;
-	top: -85px;
-	left: 30px;
+	left: 0;
 	border: transparent;
-	width: 90px;
-	height: 90px;
+	max-width: 90px;
+	max-height: 90px;
 	background-color: #f08c33;
 	border-radius: 5px;
 	cursor: pointer;
 
 	@include tablets() {
-	   	top: -75px;
-	   	left: 25px;
+	   	top: 0;
+	   	left: 0;
 	}
 
 	&:after {
@@ -135,8 +165,7 @@
 	opacity: 0.9;
 	border-radius: 5px;
 	position: absolute;
-	top: -87px;
-	left: 120px;
+	left: 90px;
 	padding: 18px;
 	display: none;
 
@@ -235,10 +264,10 @@
 
 .logo-kkal {
 	position: absolute;
-	bottom: -40px;
-	left: 30px;
+	bottom: 30px;
+	left: 0;
 	width: 60px;
-	height: 90px;
+	height: 60px;
 	background: url(../img/kkal.png) center center no-repeat;
 	color: #fff;
 	font-family: Gagalin;
@@ -246,53 +275,38 @@
 	user-select: none;
 
 	@include tablets() {
-		top: -85px;
-	   	left: 86%;		
+		bottom: 90%;
+	   	left: 90%;		
   	}
+
 }
 
 .logo-kkal__item {
 	display: block;
-	position: relative;
+	position: absolute;
+	top: 25px;
 	opacity: 0.7;
 	text-align: center;
 	display: block;
 	line-height: 1.5;
 }
 
-.logo-kkal__item--sum {
-	top: 40px;
-}
-
-.logo-kkal__item--name {
-	top: 38px ;
-}
-
-.weight {
-	display: block;
-	margin-top: 10px;
-}
-
-.right_slider {
-	margin-left: 30px;
-	width: 45%;
-	height: 100%;
-	padding-top: 130px ;
-
-	@include tablets() {
-		height: auto;
-	   	width: 100%;
-	   	margin: 0;
-	   	padding: 0 80px;
-	   	text-align: center;	
-	}
-}
-
 .title_slider-white {
 	color: #fff;
 	margin: 0;
 	line-height: 1;
+
+	 @include tablets {
+        font-size: rem(60px);
+    }
+
+    @include phones {
+        font-size: 50px;
+        text-align: center;
+        // margin-left: -25px;
+    }
 }
+
 
 .slider-desc {
 	color: #fff;
@@ -307,6 +321,10 @@
 	display: flex;
 	margin: 0;
 	padding: 0;
+
+	 @include tablets {
+       justify-content: center;
+    }
 }
 
 .price__item {
@@ -315,14 +333,28 @@
   	font-size: rem(72px);
  	color: #e45028;
 
+ 	@include tablets {
+    font-size: rem(45px);
+}
+
+	@include phones {
+    font-size: rem(40px);
+}
+
  	&_index {
  		font-size: rem(28px);
  		display: inline-flex;
  		margin-top: 10%;
+
+ 		@include tablets {
+		    margin-top: 7%;
+		    font-size: rem(14px);
+		}   
  	}
 
  	&_btn {
  		margin-left: rem(30px);
+ 		vertical-align: middle;
  	}
 }
 

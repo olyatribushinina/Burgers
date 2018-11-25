@@ -1,5 +1,5 @@
 const $hamburger = $(".js-open-menu");
-const $fixedMenu = $(".js-fixed-menu")
+const $fixedMenu = $(".js-fixed-menu");
 
 $hamburger.on("click", function() {
 	$(this).toggleClass("js-open-menu--active");
@@ -38,3 +38,32 @@ function accordeon(btn) {
 
 accordeon(".accordeon__button");
 accordeon(".accordeon__button_vertical");
+
+
+
+const $prev = $(".prev");
+const $next = $(".next");
+const $slides = $(".slide");
+var i = 0;
+
+	$(prev).on("click", function(e) {
+		e.preventDefault;
+		$slides[i].addClass("");
+		if(i < 0) {
+			i = slides.length - 1;
+		};
+	
+		$slides[i].addClass("showed-js");
+	});
+
+	$(next).on("click", function (e) {
+		e.preventDefault;
+		$slides[i].addClass("");
+		i++;
+		if(i >= slides.length) {
+			i = 0;
+		};
+		
+		$slides[i].addClass("showed-js");
+	});
+
