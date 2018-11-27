@@ -11,106 +11,71 @@
  }
 
  .container_slider {
- 	display: flex;
- 	position: relative;
- }
-
- .prev { 
- 	position: absolute;
- 	display: flex;
-    justify-content: space-between;
-    top: 50%;
-    left:0;
-    margin-right: 50px;
- }
-
- .next {
- 	position: absolute;	
- 	display: flex;
-    justify-content: space-between;
-    top: 50%;
-    right: 0;
-    margin-left: 50px;
- }
-
- .prev__link, .next__link {
- 	text-decoration: none;
- }
-
- .prev__icon {
- 	width: 33px;
- 	height: 33px;
-	transform: rotate(90deg);
- }
-
- .next__icon {
- 	width: 33px;
- 	height: 33px;
-	transform: rotate(-90deg);
- }
-
- .sl {
+ 	width: 960px;
  	height: 100%;
- 	width: 100%;
- 	position: relative;
- 	top: 0;
- 	left: 0;
- 	right: 0;
- 	// display: flex;
- 	flex: 1;
- 	// justify-content: center;
- 	list-style: none;
- 	// margin: 0 50px;
- 	padding: 0;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ }
 
+ 
+ .viewport {
+ 	overflow: hidden;
+	height: 500px;
+	// marin: 0 auto;
+	 @include tablets {
+		height: 600px;
+		
+    }
+ }
+
+ .slidewrapper {
+ 	width: (100% * 5);
+ 	position: relative;
+ 	transition-timing-function: easy-in-out;
+ 	display: flex;
+ 	list-style: none;
+ 	margin: 0;
+ 	padding: 0;
  }
 
  .slide {
- 	max-width: 900px;
-	position: absolute;
-	right: 0;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	display: none;
-	height: 500px;
+ 	display: flex;
+ 	position: relative;
+ 	width: 100%;
+ 	width: 900px;
+ 	height: 500px;
+ 	margin: 30px;
+ 	
 
 	@include tablets {
-		max-width: 500px;
         flex-direction: column;
-        margin: 0 auto;
         align-items: center;
-        height: 100%;
+        justify-content: center;
         text-align: center;
+        min-height: 600px;
     }
 
-    @include tablets {
-		max-width: 300px;
+    @include phones {
+		height: 100%;
     }
- }
-
- .showed-js {
- 	display: flex;
  }
 
  .sl__img {
  	max-width: 100%;
- 	flex: 1;	
  }
 
  .sl__pic {
- 	width: 100%;
+ 	min-width: 100%;
  	margin-top: rem(80px);
 
-	@include tablets {
-       max-width: 80%;
+ 	@include phones {
+        max-width: 100%;
     }
  }
 
  .sl__desc {
- 	max-width: 410px;
 	display: flex;
-	flex: 1;
 	flex-direction: column;
 	justify-content: center;
  }
@@ -119,8 +84,8 @@
 	position: absolute;
 	left: 0;
 	border: transparent;
-	max-width: 90px;
-	max-height: 90px;
+	min-width: 90px;
+	min-height: 90px;
 	background-color: #f08c33;
 	border-radius: 5px;
 	cursor: pointer;
@@ -129,6 +94,11 @@
 	   	top: 0;
 	   	left: 0;
 	}
+
+	@include phones {
+        max-width: 90px;
+		max-height: 90px;
+    }
 
 	&:after {
 		width: 46px;
@@ -170,7 +140,7 @@
 	display: none;
 
 	@include tablets() {
-	   	right: 300px;
+	   	top: 0;
 	}
 }
 
@@ -275,8 +245,13 @@
 	user-select: none;
 
 	@include tablets() {
+		bottom: 88%;
+	   	left: 85%;		
+  	}
+
+  	@include tablets() {
 		bottom: 90%;
-	   	left: 90%;		
+	   	left: 85%;		
   	}
 
 }
@@ -291,6 +266,12 @@
 	line-height: 1.5;
 }
 
+.sl__desc {
+	@include tablets {
+        margin-bottom: 20px;
+    }
+} 
+
 .title_slider-white {
 	color: #fff;
 	margin: 0;
@@ -302,8 +283,6 @@
 
     @include phones {
         font-size: 50px;
-        text-align: center;
-        // margin-left: -25px;
     }
 }
 
@@ -357,5 +336,43 @@
  		vertical-align: middle;
  	}
 }
+
+.sl-nav {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.prev, .next {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: calc(50% - 25px);
+}
+
+.prev {
+ 	left: 10px;
+    
+ }
+
+ .next {
+ 	right: 10px;
+ }
+
+ .prev__link, .next__link {
+ 	text-decoration: none;
+ }
+
+ .prev__icon {
+ 	width: 33px;
+ 	height: 33px;
+	transform: rotate(90deg);
+ }
+
+ .next__icon {
+ 	width: 33px;
+ 	height: 33px;
+	transform: rotate(-90deg);
+ }
 
 
