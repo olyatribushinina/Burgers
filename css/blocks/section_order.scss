@@ -120,10 +120,11 @@
 
 .form__radio-real {
 	display: none;
+
+	&:checked ~ .form__radio-visible:after {   
+	opacity: 1;
+	}
 }
-
-// не идентифицирует "checked"
-
 
 .form__radio-visible {
 	width: 14px;
@@ -148,9 +149,6 @@
 	}
 }
 
-.form__radio-real:checked ~ .form__radio-visible:after {   
-	opacity: 1;
-}
 
 .form__checkbox {
 	display: inline-flex;

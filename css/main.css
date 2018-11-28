@@ -1777,6 +1777,8 @@ html, body {
 
 .form__radio-real {
   display: none; }
+  .form__radio-real:checked ~ .form__radio-visible:after {
+    opacity: 1; }
 
 .form__radio-visible {
   width: 14px;
@@ -1802,9 +1804,6 @@ html, body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     opacity: 0; }
-
-.form__radio-real:checked ~ .form__radio-visible:after {
-  opacity: 1; }
 
 .form__checkbox {
   display: -webkit-inline-box;

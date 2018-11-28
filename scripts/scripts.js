@@ -56,7 +56,7 @@ function nextSlide() {
 		$(".slidewrapper").css("transform", "translate(0,0)"); //возвращаем в исходное состояние к первому слайду
 		slideNow = 1;
 	}else {
-		$(".slidewrapper").css("transform", "translateY( "+ translateWidth + px")"); 
+		$(".slidewrapper").css("transform", "translateY( "+ translateWidth + "px")"); 
 		slideNow++; //прокручиваем на один слайд вперед, прибавляя ширину
 	}
 }
@@ -66,7 +66,7 @@ function prevSlide() {
 		$(".slidewrapper").css("transform", "translate(0,0)");
 		slideNow = 1;
 	}else {
-		$(".slidewrapper").css("transform", "translate( "- translateWidth + px")");
+		$(".slidewrapper").css("transform", "translate( "- translateWidth + "px")");
 		slideNow--; //прокручиваем на один слайд вперед, вычитая ширину
 	}
 }
@@ -100,24 +100,23 @@ $prev.on("click", function(e) {
 				house_number: myForm.elements.house_number.value,
 				floor: myForm.elements.floor.value,
 				comment: myForm.elements.comment.value,
-				ansver_cash: myForm.elements.answer_cash.checked,
-				ansver_card: myForm.elements.answer_card.checked,
-				no_recall: myForm.elements.no_recall.checked
-			};
-
-			const xhr = new XMLHttpRequest();
-			xhr.responseType = "json";
-			xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
-			xhr.send(JSON.stringify(data));
-			xhr.addEventListener("load", function() {
-				if(xhr.response.status) {
-					console.log("Все ok!");
-				}
-				
-			});
+				ansver_cash: myForm.elements.answer.checked,
+				no_recall: myForm.elements.no_recall.checked;
+			}
 		}
+			
+		const xhr = new XMLHttpRequest();
+		xhr.responseType = "json";
+		xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
+		xhr.send(JSON.stringify(data));
+		xhr.addEventListener("load", function() {
+			if(xhr.response.status) {
+				console.log("Все ok!");
+			}
+			
+		});
 
-	});	
+});	
 		
 	function validateForm(form) {
 		let valid = true;
@@ -178,21 +177,23 @@ $prev.on("click", function(e) {
 
 const $modal = $(".reviews-popup");
 const $close = $(".close");
-reviewBtn(".btn-learn-more");
-reviewBtn(".btn-learn-more--phone")
+
 
 function reviewBtn(btn) {
 	$(btn).on("click", function() {
-	$modal.style.display = "block";
+	$modal.css.("display", "block");
 	}); 
 }
 
 $close.on("click", function() {
-	$modal.style.display = "none";
+	$modal.css.("display", "none");
 });
 
 window.on("click", function(e) {
 	if(e.target == $modal) {
-		$modal.style.display = "none";
+		$modal.css.("display", "none");
 	}
 });
+
+reviewBtn(".btn-learn-more");
+reviewBtn(".btn-learn-more--phone");

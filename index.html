@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
   	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Burgers</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -770,23 +770,21 @@
 
 								<!--радио-кнопки -->
 								<div class="form__buttons">
-
 									<div class="form__row">
 										<label class="form__radio">
-											<input type="text" name="answer_cash" class="form__radio-real" required>
+											<input type="radio" name="answer" class="form__radio-real" required>
 											<span class="form__radio-visible"></span>
 											<span class="form__radio-text">Потребуется сдача</span>
 											<div class="error"></div>
 										</label>
 										<label class="form__radio">
-											<input type="text" name="answer_card" class="form__radio-real" required>
+											<input type="radio" name="answer" class="form__radio-real" required>
 											<span class="form__radio-visible"></span>
 											<span class="form__radio-text">Оплата по карте</span>
 											<div class="error"></div>
 										</label>
 									</div>
-									
-									<!-- чекбох -->
+									<!-- чекбокс -->
 									<div class="form__row">
 										<label class="form_checkbox">
 										<input type="checkbox" name="no_recall" class="form__checkbox-real">
@@ -912,9 +910,8 @@
 		</ul>
 	</div>
 
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="scripts/scripts.js" defer></script>
-	
 	
 </body>
 </html>
