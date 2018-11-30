@@ -11,81 +11,222 @@
  }
 
  .container_slider {
- 	width: 960px;
- 	height: 100%;
- 	display: flex;
- 	justify-content: center;
- 	align-items: center;
+ 	margin: 0 auto;
+
  }
 
- 
+.slider {
+	top: calc(50% - 250px);
+	position: relative;
+
+	@include tablets {
+		display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
  .viewport {
+ 	position: relative;
  	overflow: hidden;
+	border: 1px solid #000;
+	width: 100%;
 	height: 500px;
-	// marin: 0 auto;
-	 @include tablets {
-		height: 600px;
-		
+
+	@include tablets {
+      	height: 600px;
+     	width: 700px;
+    }
+
+    @include phones {
+     	width: 450px;
     }
  }
 
  .slidewrapper {
- 	width: (100% * 5);
- 	position: relative;
- 	transition-timing-function: easy-in-out;
  	display: flex;
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	transition-timing-function: easy-in-out;
  	list-style: none;
  	margin: 0;
  	padding: 0;
  }
 
  .slide {
- 	display: flex;
- 	position: relative;
- 	width: 100%;
+ 	display: inline-block;
+ 	align-items: center;
  	width: 900px;
+ 	margin: 0 20px;
  	height: 500px;
- 	margin: 30px;
- 	
 
 	@include tablets {
+		width: 700px;
+		margin: 0;
+		display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         text-align: center;
-        min-height: 600px;
+        height: 600px;
     }
 
     @include phones {
-		height: 100%;
+		width: 450px;
     }
  }
 
- .sl__img {
+ .slide__img {
+ 	position: relative;
+ 	top: 50%;
+ 	transform: translateY(-50%);
+ 	width: 50%;
+ 	float: left;
+ 	
+ 	@include tablets {
+		top: 50px;
+	 	transform: translateY(0);
+	 	width: 100%;
+    }
+
+     @include phones {
+		max-width: 80%;
+    }
+ }
+
+ .slide__pic {
  	max-width: 100%;
  }
 
- .sl__pic {
- 	min-width: 100%;
- 	margin-top: rem(80px);
 
- 	@include phones {
-        max-width: 100%;
+.slide__desc {
+	position: relative;
+ 	top: 50%;
+ 	transform: translateY(-50%);
+	padding-left: 20px;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+
+	@include tablets {
+		text-align: center;
+        padding-left: 0;
+       	top: 50px;
+ 		transform: translateY(0);
+        width: 100%;
+    }
+
+    @include phones {
+		max-width: 80%;
     }
  }
 
- .sl__desc {
+
+.title_slider-white {
+	color: #fff;
+	margin: 0;
+	line-height: 1;
+
+	 @include tablets {
+        font-size: rem(60px);
+    }
+
+    @include phones {
+        font-size: 50px;
+    }
+}
+
+
+.slider-desc {
+	color: #fff;
+	font-family: Ubuntu;
+	font-size: rem(14px);
+	font-weight: 300;
+	line-height: 1.8;
+}
+
+.price__list {
+	list-style: none;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	margin: 0;
+	padding: 0;
+
+	 @include tablets {
+       justify-content: center;
+    }
+}
+
+.price__item {
+	font-family: Gagalin;
+  	font-weight: 300;
+  	font-size: rem(72px);
+ 	color: #e45028;
+
+ 	@include tablets {
+    font-size: rem(45px);
+}
+
+	@include phones {
+    font-size: rem(40px);
+}
+
+ 	&_index {
+ 		font-size: rem(28px);
+ 		display: inline-flex;
+ 		margin-top: 10%;
+
+ 		@include tablets {
+		    margin-top: 4%;
+		    font-size: rem(14px);
+		}   
+ 	}
+
+ 	&_btn {
+ 		margin-left: rem(30px);
+ 		vertical-align: middle;
+ 	}
+}
+
+
+.slider-controls__prev, .slider-controls__next{
+ 		position: absolute;
+ 		width: 30px;
+ 		height: 30px;
+ 		top: calc(50% - 15px);
+ 		cursor: pointer;
+ 	}
+
+.slider-controls__prev {
+	left: -50px;
+	transform: rotate(90deg);
+
+	@include tablets() {
+	   	left: 0;
+	}
+}	
+
+.slider-controls__next {
+	right: -50px;
+ 	transform: rotate(-90deg);
+
+ 	@include tablets() {
+	   right: 0;
+	}
  }
+
+.arrow-scroll {
+	width: 30px;
+ 	height: 30px;
+}
+
 
 .consist-btn {
 	position: absolute;
+	top: 0;
 	left: 0;
 	border: transparent;
-	min-width: 90px;
-	min-height: 90px;
+	width: rem(90px);
+  	height: rem(90px);
 	background-color: #f08c33;
 	border-radius: 5px;
 	cursor: pointer;
@@ -95,21 +236,15 @@
 	   	left: 0;
 	}
 
-	@include phones {
-        max-width: 90px;
-		max-height: 90px;
-    }
-
 	&:after {
-		width: 46px;
-		height: 46px;
-		display: block;
-		position: absolute;
-		background: url(../img/burger.png) center center no-repeat;
-		background-size: contain;
 		content: "";
+		display: block;
+		width: 46px;
+		height: 44px;
+		position: absolute;
 		top: 40%;
 		left: 50%;
+		background: url(../img/burger.png) center center no-repeat;
 		transform: translate(-50%, -50%);
   	}
 
@@ -233,146 +368,54 @@
 }
 
 .logo-kkal {
-	position: absolute;
-	bottom: 30px;
-	left: 0;
 	width: 60px;
-	height: 60px;
-	background: url(../img/kkal.png) center center no-repeat;
+	height: 85px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: flex;
+  	flex-direction: column;
+ 	justify-content: center;
+  	align-items: center;
+  	text-align: center;
+  	font-size: rem(20px);
+  	opacity: 0.5;
+	// background: url(../img/kkal.png) center center no-repeat;
 	color: #fff;
 	font-family: Gagalin;
-	font-size: 20px;
 	user-select: none;
 
 	@include tablets() {
-		bottom: 88%;
-	   	left: 85%;		
+		bottom: calc(100% - 85px);
+		left: 637px;
   	}
 
-  	@include tablets() {
-		bottom: 90%;
-	   	left: 85%;		
+  	@include phones {
+		left: 388px;
+    }
+
+  	&__icon {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-bottom: 5px;
+	    .kkal {
+	      width: 60px;
+	      height: 60px;
+	    }
   	}
 
+  &__value {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    font-size: rem(14px);
+  }
+
 }
-
-.logo-kkal__item {
-	display: block;
-	position: absolute;
-	top: 25px;
-	opacity: 0.7;
-	text-align: center;
-	display: block;
-	line-height: 1.5;
-}
-
-.sl__desc {
-	@include tablets {
-        margin-bottom: 20px;
-    }
-} 
-
-.title_slider-white {
-	color: #fff;
-	margin: 0;
-	line-height: 1;
-
-	 @include tablets {
-        font-size: rem(60px);
-    }
-
-    @include phones {
-        font-size: 50px;
-    }
-}
-
-
-.slider-desc {
-	color: #fff;
-	font-family: Ubuntu;
-	font-size: rem(14px);
-	font-weight: 300;
-	line-height: 1.8;
-}
-
-.price__list {
-	list-style: none;
-	display: flex;
-	margin: 0;
-	padding: 0;
-
-	 @include tablets {
-       justify-content: center;
-    }
-}
-
-.price__item {
-	font-family: Gagalin;
-  	font-weight: 300;
-  	font-size: rem(72px);
- 	color: #e45028;
-
- 	@include tablets {
-    font-size: rem(45px);
-}
-
-	@include phones {
-    font-size: rem(40px);
-}
-
- 	&_index {
- 		font-size: rem(28px);
- 		display: inline-flex;
- 		margin-top: 10%;
-
- 		@include tablets {
-		    margin-top: 7%;
-		    font-size: rem(14px);
-		}   
- 	}
-
- 	&_btn {
- 		margin-left: rem(30px);
- 		vertical-align: middle;
- 	}
-}
-
-.sl-nav {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
-
-.prev, .next {
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	top: calc(50% - 25px);
-}
-
-.prev {
- 	left: 10px;
-    
- }
-
- .next {
- 	right: 10px;
- }
-
- .prev__link, .next__link {
- 	text-decoration: none;
- }
-
- .prev__icon {
- 	width: 33px;
- 	height: 33px;
-	transform: rotate(90deg);
- }
-
- .next__icon {
- 	width: 33px;
- 	height: 33px;
-	transform: rotate(-90deg);
- }
 
 

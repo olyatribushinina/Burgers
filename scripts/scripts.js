@@ -45,41 +45,53 @@ accordeon(".accordeon__button_vertical");
 
 // слайдер
 
-const $prev = $(".prev__link");
-const $next = $(".next__link");
-var slideNow = 1;
-var slideCount = $(".slidewrapper").children().length;
-var translateWidth = 940; //ширина слайда
+$(function () {
 
-function nextSlide() {
-	if (slideNow = slideCount || slideNow < slideCount) {  
-		$(".slidewrapper").css("transform", "translate(0,0)"); //возвращаем в исходное состояние к первому слайду
-		slideNow = 1;
-	}else {
-		$(".slidewrapper").css("transform", "translateY( "+ translateWidth + "px")"); 
-		slideNow++; //прокручиваем на один слайд вперед, прибавляя ширину
-	}
-}
+	$(".slider-controls__next").on("click", function(e) {
+		e.preventDefault();
 
-function prevSlide() {
-	if (slideNow = slideCount || slideNow > slideCount) {
-		$(".slidewrapper").css("transform", "translate(0,0)");
-		slideNow = 1;
-	}else {
-		$(".slidewrapper").css("transform", "translate( "- translateWidth + "px")");
-		slideNow--; //прокручиваем на один слайд вперед, вычитая ширину
-	}
-}
+		var $this = $(this),
+			container = $this.closest(".slider");
+			items = container.find(".slide"),
+			activeSlide = items.filter(".active"),
+			reqItem = activeSlide.next(),
+			reqIndex = reqItem.index(),
+			list = container.find(".slidewrapper"),
+			duration = 500;
 
-$next.on("click", function(e) {
-	e.preventDefault();
-	nextSlide();
-});
+		if (reqItem.length) {
+				list.animate( {
+				"left" : -reqIndex * 100 + "%"
+			}, duration, function () {
+				activeSlide.removeClass("active");
+				reqItem.addClass("active");
+			});
+		}	
 
+	});
 
-$prev.on("click", function(e) {
-	e.preventDefault();
-	prevSlide();
+	$(".slider-controls__prev").on("click", function(e) {
+		e.preventDefault();
+
+		var $this = $(this),
+			container = $this.closest(".slider");
+			items = container.find(".slide"),
+			activeSlide = items.filter(".active"),
+			reqItem = activeSlide.prev(),
+			reqIndex = reqItem.index(),
+			list = container.find(".slidewrapper"),
+			duration = 500;
+
+		if (reqItem.length) {
+				list.animate( {
+				"left" : -reqIndex * 100 + "%"
+			}, duration, function () {
+				activeSlide.removeClass("active");
+				reqItem.addClass("active");
+			});
+		}	
+	});
+
 });
 
 
@@ -101,7 +113,7 @@ $prev.on("click", function(e) {
 				floor: myForm.elements.floor.value,
 				comment: myForm.elements.comment.value,
 				ansver_cash: myForm.elements.answer.checked,
-				no_recall: myForm.elements.no_recall.checked;
+				no_recall: myForm.elements.no_recall.checked,
 			}
 		}
 			
@@ -181,17 +193,17 @@ const $close = $(".close");
 
 function reviewBtn(btn) {
 	$(btn).on("click", function() {
-	$modal.css.("display", "block");
+		$modal.css("display", "block");
 	}); 
 }
 
-$close.on("click", function() {
-	$modal.css.("display", "none");
+$close.on("click", function(e) {
+	$modal.css("display", "none");
 });
 
 window.on("click", function(e) {
 	if(e.target == $modal) {
-		$modal.css.("display", "none");
+		$modal.css("display", "none");
 	}
 });
 
