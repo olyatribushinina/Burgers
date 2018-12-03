@@ -19,3 +19,19 @@
   }	
 
 }
+
+.video {
+	background: url() center center/cover no-repeat;
+	display: flex;
+	align-items: center;
+}
+
+.player__playback {
+	position: absolute;
+	height: 4px;
+	width: 446px;
+	background: #626262;
+	top: 15px;
+	left: 50px;
+	padding: 10px 0;
+}
