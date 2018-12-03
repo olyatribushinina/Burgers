@@ -673,23 +673,59 @@
 			</section>
 
 			<!-- Как мы работаем -->
-			<section class="section video" id="how-we-work">
+			<section class="section section_how-work video" id="how-we-work">
 				<div class="container">
 					<h5 class="title title_how-work">как мы работаем</h5>
-					<div id="yt-player"></div>
-					<div class="player hidden">
-						<div class="player__wrapper active">
+					<div class="video-player hidden">
+						<div class="video-player__wrapper active">
 							<div id="yt-player"></div>
 							<div class="player__splash"></div>
 						</div>
-						<div class="player__controls">
-							<button class="player__start paused"></button>
-							<div class="player__playback">
-								<button class="player__playback-button"></button>
+						<div class="video-player__poster">
+							<img class="video-player__img" src="img/video-cover.png" alt="заставка к видео">
+							 <!-- затемнение фона поверх картинки -->
+							<div class="video-player__cover">
+								<!-- кнопка старт -->
+								<button class="btn-start">
+									<div class="btn-start-icon"></div>
+								</button>
 							</div>
-							<div class="player__duration">
-								<span class="player__duration-completed">0:00</span>
-								<span class="player__duration-estimate">0:00</span>
+							<!-- панель с видео-управлением -->
+							<div class="video-player__pannel">
+								<div class="video-player__pannel-item">
+									<button class="pannel-btn pannel-btn_start paused">
+										<svg class="pannel-btn__start-icon">
+											<use xlink:href="sprite/sprite.svg#play"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="video-player__pannel-item">
+									<div class="progress">
+										<div class="progress__wrap progress__wrap-play">
+											<div class="progress__wrap progress__wrap-slider"></div>
+										</div>
+									</div>
+								</div>
+								<div class="video-player__pannel-item">
+									<div class="player__duration">
+										<span class="player__duration-completed">0:00</span>
+										<span class="player__duration-estimate">0:00</span>
+									</div>
+								</div>
+								<div class="video-player__pannel-item">
+									<button class="pannel-btn">
+										<svg class="pannel-btn__volume-icon">
+											<use xlink:href="sprite/sprite.svg#volume"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="video-player__pannel-item">
+									<div class="progress">
+										<div class="progress__wrap progress__wrap-volume">
+											<div class="progress__wrap progress__wrap-slider"></div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -792,7 +828,7 @@
 
 			<!-- Карта -->
 			<section class="section section_map" id="contacts">
-				<div class="yandex-map"></div>
+				<div id="map" class="map"></div>
 				<footer class="footer">
 					<div class="container container_footer">
 						<div class="footer__column footer__column_left">
@@ -903,7 +939,8 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
-	<!-- <script src="://www.youtube.com/iframe_api"></script> -->
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	<!-- <script src="https://www.youtube.com/iframe_api"></script> -->
 	<script src="scripts/scripts.js"></script>
 	
 </body>
